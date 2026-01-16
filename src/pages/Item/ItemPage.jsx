@@ -7,7 +7,7 @@ export function ItemPage() {
   return (
     <>
       <Header />
-
+      
       <div class="main-container js-main-container">
       </div>
 
