@@ -1,13 +1,20 @@
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { Link } from "react-router";
+import "./LandingPage.css"
+import bg from "../../assets/images/2025wk36-mrp-gender-mens-spot-a.avif"
 
 export function LandingPage() {
+  console.log('hello');
   return (
     <>
-    <Header />
+      <Header />
 
-      <div className="main-container">
-        <div className="background-image-container">
+      <title>Mpahla Online Store</title>
+
+        <div className="background-image-container" style={{
+          backgroundImage: `url(${bg})`
+        }}>
           <div className="background-overlay">
             <p>Livin' that everyday vibe</p>
             <Link to="/home">
@@ -20,7 +27,7 @@ export function LandingPage() {
 
         <div className="home-grid-layout js-home-grid-layout">
         </div>
-      </div>
+      
 
       <Footer />
     </>

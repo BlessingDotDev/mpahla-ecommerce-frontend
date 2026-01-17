@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import cartIcon from "../../assets/images/icons/shopping-cart.svg";
 import "./CheckoutPageHeader.css"
 
 export function CheckoutPageHeader() {
@@ -19,7 +20,7 @@ export function CheckoutPageHeader() {
 
         <Link to="/checkout">
           <div className="cart-container primary-icon">
-            <img src="images/icons/shopping-cart.svg" alt="cart icon"/>
+            <img src={cartIcon} alt="cart icon"/>
               <div className="cart-item js-cart-item">0</div>
           </div>
         </Link>

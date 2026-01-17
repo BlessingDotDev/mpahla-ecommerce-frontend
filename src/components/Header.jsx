@@ -1,4 +1,7 @@
 import { Link } from "react-router";
+import menuIcon from "../assets/images/icons/menu.svg";
+import searchIcon from "../assets/images/icons/search.svg";
+import cartIcon from "../assets/images/icons/shopping-cart.svg";
 import "./Header.css";
 
 export function Header() {
@@ -6,7 +9,7 @@ export function Header() {
     <header>
       <div className="header-container">
         <div className="logo-section">
-          <img className="menu-icon" src="images/icons/menu.svg" alt="" />
+          <img className="menu-icon" src={menuIcon} alt="" />
           <Link to="/">
             <span className="logo-name">
               <span className="logo-letter">M</span>p<span className="logo-letter">a</span>hl<span className="logo-letter">a</span>
@@ -16,19 +19,19 @@ export function Header() {
 
         <div className="search-bar js-search-bar">
           <div className="search-icon-box ">
-            <img src="images/icons/search.svg" />
+            <img src={searchIcon} />
           </div>
           <input type="search" placeholder="Search Items, Brands & Catagories" />
         </div>
 
         <div className="header-right-section">
           <div className="search-icon js-search-icon">
-            <img src="images/icons/search.svg" />
+            <img src={searchIcon} />
           </div>
 
           <Link to="/checkout">
             <div className="cart-container">
-              <img src="images/icons/shopping-cart.svg" alt="cart icon" />
+              <img src={cartIcon} alt="cart icon" />
               <div className="cart-item js-cart-item">0</div>
             </div>
           </Link>
