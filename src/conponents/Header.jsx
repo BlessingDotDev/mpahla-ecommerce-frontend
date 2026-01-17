@@ -6,7 +6,7 @@ export function Header() {
       <div className="header-container">
         <div className="logo-section">
           <img className="menu-icon" src="images/icons/menu.svg" alt="" />
-          <a href="index.html">
+          <a href="/">
             <span className="logo-name">
               <span className="logo-letter">M</span>p<span className="logo-letter">a</span>hl<span className="logo-letter">a</span>
             </span>
@@ -25,7 +25,7 @@ export function Header() {
             <img src="images/icons/search.svg" />
           </div>
 
-          <a href="checkout.html">
+          <a href="/checkout">
             <div className="cart-container">
               <img src="images/icons/shopping-cart.svg" alt="cart icon" />
               <div className="cart-item js-cart-item">0</div>

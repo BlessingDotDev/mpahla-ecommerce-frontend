@@ -102,14 +102,14 @@ function renderProductList() {
     }, 1000)
   }
 
-// For the Item.html page and itemdata.js,item.js
+// For the /item page and itemdata.js,item.js
   document.querySelectorAll('.js-product-image')
     .forEach(image => {
       image.addEventListener('click', () => {
         const { productId } = image.dataset;
         
         saveitemId(productId);
-        window.location.href = 'item.html';
+        window.location.href = '/item';
       })
     })
 

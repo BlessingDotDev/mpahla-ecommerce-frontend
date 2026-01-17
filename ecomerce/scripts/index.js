@@ -12,7 +12,7 @@ function renderProductsCategories() {
    const matchingProduct = getMatchingProduct(category);
 
     productsCategoryHTML += `
-      <a href="shop.html">
+      <a href="/home">
         <div class="content-container js-content-container"
         data-product-category="${matchingProduct.category}">
           <img src="${matchingProduct.image}" alt="men content image">
