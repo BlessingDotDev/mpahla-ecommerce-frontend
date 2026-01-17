@@ -10,11 +10,11 @@ export function LandingPage() {
         <div className="background-image-container">
           <div className="background-overlay">
             <p>Livin' that everyday vibe</p>
-            <a href="/home">
+            <Link to="/home">
               <button className="js-shop-all-button">
                 Shop All
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
