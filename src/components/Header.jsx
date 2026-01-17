@@ -1,7 +1,9 @@
 import { Link } from "react-router";
+import { HeaderUser } from "./HeaderUser";
 import menuIcon from "../assets/images/icons/menu.svg";
 import searchIcon from "../assets/images/icons/search.svg";
 import cartIcon from "../assets/images/icons/shopping-cart.svg";
+
 import "./Header.css";
 
 export function Header() {
@@ -28,6 +30,8 @@ export function Header() {
           <div className="search-icon js-search-icon">
             <img src={searchIcon} />
           </div>
+
+          <HeaderUser />
 
           <Link to="/checkout">
             <div className="cart-container">

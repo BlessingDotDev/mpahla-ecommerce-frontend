@@ -1,0 +1,57 @@
+  .user-icon-box {
+    display: initial;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.15s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-icon-box:hover {
+    background-color: rgba(0, 0, 0, 0.159);
+  }
+
+  .user-icon {
+    height: 25px;
+  }
+
+  @media (min-width: 992px) {
+    .user-icon-box {
+      margin-left: 40px;
+    }
+
+    .user-icon {
+      height: 30px;
+    }
+  }
+
+  /* loag in */
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.605);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 2000;
+    display: none;
+  }
+
+  .form-container {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-color: red;
+    max-width: 600px;
+
+  }
