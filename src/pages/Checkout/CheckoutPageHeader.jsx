@@ -3,23 +3,23 @@ import "./CheckoutPageHeader.css"
 export function CheckoutPageHeader() {
   return (
     <header>
-      <div class="header-container">
-        <div class="logo-section">
+      <div className="header-container">
+        <div className="logo-section">
           <a href="index.html">
-            <span class="logo-name">
-              <span class="logo-letter">M</span>p<span class="logo-letter">a</span>hl<span class="logo-letter">a</span>
+            <span className="logo-name">
+              <span className="logo-letter">M</span>p<span className="logo-letter">a</span>hl<span className="logo-letter">a</span>
             </span>
           </a>
         </div>
 
-        <div class="header-right-section">
-          <p class="checkout-items">Checkout (<span class="items js-items">0</span> items)</p>
+        <div className="header-right-section">
+          <p className="checkout-items">Checkout (<span className="items js-items">0</span> items)</p>
         </div>
 
         <a href="checkout.html">
-          <div class="cart-container primary-icon">
+          <div className="cart-container primary-icon">
             <img src="images/icons/shopping-cart.svg" alt="cart icon"/>
-              <div class="cart-item js-cart-item">0</div>
+              <div className="cart-item js-cart-item">0</div>
           </div>
         </a>
       </div>

@@ -8,8 +8,8 @@ export function HomePage() {
     <>
       <Header />
 
-      <div class="main-container">
-        <div class="grid-layout js-grid-layout">
+      <div className="main-container">
+        <div className="grid-layout js-grid-layout">
         </div>
       </div>
 

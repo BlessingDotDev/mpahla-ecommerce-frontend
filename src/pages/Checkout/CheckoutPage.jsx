@@ -7,16 +7,16 @@ export function CheckoutPage() {
     <>
       <CheckoutPageHeader />
 
-      <div class="main-container">
-        <h2 class="page-title">
+      <div className="main-container">
+        <h2 className="page-title">
           Review your order
         </h2>
 
-        <div class="main-grid">
-          <div class="cart-summary-container js-cart-summary-container">
+        <div className="main-grid">
+          <div className="cart-summary-container js-cart-summary-container">
           </div>
 
-          <div class="order-summary-section js-order-summary-section">
+          <div className="order-summary-section js-order-summary-section">
 
           </div>
         </div>

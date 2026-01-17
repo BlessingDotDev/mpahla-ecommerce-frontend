@@ -8,7 +8,7 @@ export function ItemPage() {
     <>
       <Header />
       
-      <div class="main-container js-main-container">
+      <div className="main-container js-main-container">
       </div>
 
       <Footer />
