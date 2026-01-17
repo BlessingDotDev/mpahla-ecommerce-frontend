@@ -1,5 +1,5 @@
-import { Header } from "../../conponents/Header";
-import { Footer } from "../../conponents/Footer";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 
 export function LandingPage() {
   return (
