@@ -1,12 +1,11 @@
-//import dayjs from 'dayjs';
-//import axios from 'axios';
+import dayjs from 'dayjs';
+import axios from 'axios';
 import { Fragment } from 'react';
 import BuyAgainIcon from '../../assets/images/icons/buy-again.png';
 
-export function OrdersDetailsGrid(/*{ order, loadCart }*/) {
+export function OrdersDetailsGrid({ order, loadCart }) {
   
   return (
-    <div>HEllo</div>/*
     <div className="order-details-grid">
       {order.products.map((orderProduct) => {
       
@@ -50,10 +49,10 @@ export function OrdersDetailsGrid(/*{ order, loadCart }*/) {
                   Track package
                 </button>
               </a>
-            </div> 
+            </div>
           </Fragment>
         );
       })}
     </div>
- */ );
+  );
 }

@@ -5,6 +5,7 @@ import { ItemPage } from "./pages/Item/ItemPage";
 import { CheckoutPage } from "./pages/Checkout/CheckoutPage";
 import { OrdersPage } from "./pages/orders/OrdersPage";
 import { TrackingPage } from "./pages/Tracking/TrackingPage";
+import { NotFoundPage } from "./pages/Notfound/NotFoundPage.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="checkout" element={<CheckoutPage />} />
       <Route path="orders" element={< OrdersPage />} />
       <Route path="tracking" element={<TrackingPage />} />
+      <Route path="#" element={<NotFoundPage />} />
     </Routes>
   );
 }

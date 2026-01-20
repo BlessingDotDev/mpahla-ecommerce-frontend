@@ -1,9 +1,8 @@
-//import dayjs from 'dayjs';
-//import { formartCurrency } from '../../utils/money.js';
+import dayjs from 'dayjs';
+import { formartCurrency } from '../../utils/money.js';
 
-export function OrdersHeader(/*{ order }*/) {
+export function OrdersHeader({ order }) {
   return (
-    <div>HEllo header</div> /*
 
     <div className="order-header">
       <div className="order-header-left-section">
@@ -28,5 +27,5 @@ export function OrdersHeader(/*{ order }*/) {
         </div>
       </div>
     </div>
-  */);
+  );
 }
