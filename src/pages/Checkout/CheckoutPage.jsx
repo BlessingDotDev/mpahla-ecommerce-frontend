@@ -1,5 +1,7 @@
 import { CheckoutPageHeader } from "./CheckoutPageHeader";
-import "./CheckoutPageHeader.css"
+import { CartSummary } from "./CartSummary";
+import { OrderSummary } from "./OrderSummary";
+import './CheckoutPage.scss';
 
 export function CheckoutPage() {
   return (
@@ -7,18 +9,14 @@ export function CheckoutPage() {
     <>
       <CheckoutPageHeader />
 
-      <div className="main-container">
+      <div className="checkout-main-container">
         <h2 className="page-title">
           Review your order
         </h2>
 
         <div className="main-grid">
-          <div className="cart-summary-container js-cart-summary-container">
-          </div>
-
-          <div className="order-summary-section js-order-summary-section">
-
-          </div>
+          <CartSummary />
+          <OrderSummary />
         </div>
       </div>
     </>

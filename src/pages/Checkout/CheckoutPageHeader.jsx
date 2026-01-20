@@ -5,7 +5,7 @@ import "./CheckoutPageHeader.css"
 
 export function CheckoutPageHeader() {
   return (
-    <header>nk
+    <header>
       <div className="header-container">
         <div className="logo-section">
           <Link to="/">
