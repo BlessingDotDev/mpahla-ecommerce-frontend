@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import products from "../../data/products.js";
 import { formatCurrency } from '../../scripts/utils/money.js';
-import "./HomePageGrid.css";
+import "./HomePageGrid.scss";
 import "./between-shop-and-item.css"
 
 export function HomePageGrid() {

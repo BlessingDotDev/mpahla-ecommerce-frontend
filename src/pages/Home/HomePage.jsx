@@ -7,9 +7,7 @@ export function HomePage() {
     <>
       <Header />
 
-      <div className="main-container">
        <HomePageGrid />
-      </div>
 
       <Footer />
     </>

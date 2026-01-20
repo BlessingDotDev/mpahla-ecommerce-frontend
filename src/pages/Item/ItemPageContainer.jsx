@@ -1,7 +1,6 @@
 import products from "../../data/products.js";
 import { formatCurrency } from "../../scripts/utils/money.js";
-import "./ItemPageContainer.css";
-import "../../shared-styles/between-shop-and-item.css"
+import "./ItemPageContainer.scss";
 
 export function ItemPageContainer() {
   let matchingProduct;
