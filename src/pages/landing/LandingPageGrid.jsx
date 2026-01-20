@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import { products, productsCatagories } from "../../data/products.js";
+import products from "../../data/products";
+import productsCatagories  from "../../data/productCategories";
 
 export function LandingPageGrid() {
 
@@ -24,11 +25,11 @@ export function LandingPageGrid() {
             console.log(matchingProduct.image);
             
             return (
-              <Link to="/home">
-                <div class="content-container js-content-container"
+              <Link to="/home" key={matchingProduct.id}>
+                <div className="content-container js-content-container"
                   data-product-category={`${matchingProduct.category}`}>
                   <img src={`${matchingProduct.image}`} alt="men content image" />
-                  <div class="content-link">
+                  <div className="content-link">
                     <span>{`${category.category}`}</span>
                     <p>&gt</p>
                   </div>
