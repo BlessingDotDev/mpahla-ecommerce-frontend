@@ -121,7 +121,7 @@ export const products = [
     name: "Black Nike Bag",
     brand: "Nike",
     priceCents: 60000,
-    image: "./images/products/bag.avif",
+    image: "images/products/bag.avif",
     category: "Accessories",
     size: ["M", "L"],
     ratings: {
@@ -140,7 +140,7 @@ export const products = [
     name: "Black Nike Bag",
     brand: "Nike",
     priceCents: 79999,
-    image: "./images/products/bag1.avif",
+    image: "images/products/bag1.avif",
     category: "Accessories",
     size: ["M", "L"],
     ratings: {
@@ -159,7 +159,7 @@ export const products = [
     name: "Blue Nike Bag",
     brand: "Nike",
     priceCents: 79999,
-    image: "./images/products/bag2.avif",
+    image: "images/products/bag2.avif",
     category: "Accessories",
     size: ["M", "L"],
     ratings: {
@@ -178,7 +178,7 @@ export const products = [
     name: "Small Black Nike Bag",
     brand: "Nike",
     priceCents: 44999,
-    image: "./images/products/bag4.avif",
+    image: "images/products/bag4.avif",
     category: "Accessories",
     size: ["XS", "S"],
     ratings: {
@@ -198,7 +198,7 @@ export const products = [
     name: "Blue Nike Bag",
     brand: "Nike",
     priceCents: 64999,
-    image: "./images/products/bag6.avif",
+    image: "images/products/bag6.avif",
     category: "Accessories",
     size: ["M", "S"],
     ratings: {
@@ -218,7 +218,7 @@ export const products = [
     name: "Gray Nike Hand-Bag",
     brand: "Nike",
     priceCents: 69999,
-    image: "./images/products/bagg5.avif",
+    image: "images/products/bagg5.avif",
     category: "Accessories",
     size: ["S", "M"],
     ratings: {
@@ -238,7 +238,7 @@ export const products = [
     name: "Graphic Black T-shirt",
     brand: "Soho",
     priceCents: 29999,
-    image: "./images/products/gragphic-shirt.avif",
+    image: "images/products/gragphic-shirt.avif",
     category: "Men",
     size: ["S", "M", "L", "XL"],
     ratings: {
@@ -258,7 +258,7 @@ export const products = [
     name: "Black Hat",
     brand: "Nike",
     priceCents: 39999,
-    image: "./images/products/hat.avif",
+    image: "images/products/hat.avif",
     category: "Accessories",
     size: ["S", "M"],
     ratings: {
@@ -277,7 +277,7 @@ export const products = [
     name: "Red jacket",
     brand: "Nike",
     priceCents: 70000,
-    image: "./images/products/kids.avif",
+    image: "images/products/kids.avif",
     category: "Kids",
     size: ["S", "XS", "M"],
     ratings: {
@@ -296,7 +296,7 @@ export const products = [
     name: "Red Hat",
     brand: "Nike",
     priceCents: 20000,
-    image: "./images/products/kids1.avif",
+    image: "images/products/kids1.avif",
     category: "Accessories",
     size: ["S", "XS"],
     ratings: {
@@ -315,7 +315,7 @@ export const products = [
     name: "Kids Yellow T-shirt",
     brand: "Nike",
     priceCents: 40000,
-    image: "./images/products/kids2.avif",
+    image: "images/products/kids2.avif",
     category: "Kids",
     size: ["S", "XS"],
     ratings: {
@@ -335,7 +335,7 @@ export const products = [
     name: "Sports shorts",
     brand: "Nike",
     priceCents: 54000,
-    image: "./images/products/kids3.avif",
+    image: "images/products/kids3.avif",
     category: "Kids",
     size: ["S", "XS"],
     ratings: {
@@ -356,7 +356,7 @@ export const products = [
     name: "White t-shirt",
     brand: "Nike",
     priceCents: 64000,
-    image: "./images/products/kids4.avif",
+    image: "images/products/kids4.avif",
     category: "Kids",
     size: ["S", "XS"],
     ratings: {
@@ -376,7 +376,7 @@ export const products = [
     name: "Tracksuits",
     brand: "Nike",
     priceCents: 124000,
-    image: "./images/products/kids5.avif",
+    image: "images/products/kids5.avif",
     category: "kids",
     size: ["S", "XS"],
     ratings: {
@@ -396,7 +396,7 @@ export const products = [
     name: "Black $ White Sneakers",
     brand: "Batu",
     priceCents: 32000,
-    image: "./images/products/mean-sneakers2.avif",
+    image: "images/products/mean-sneakers2.avif",
     category: "Men",
     size: ["6","7", "8", "9"],
     ratings: {
@@ -415,7 +415,7 @@ export const products = [
     name: "Black $ White Sneakers",
     brand: "Batu",
     priceCents: 32000,
-    image: "./images/products/mean-sneakes3.avif",
+    image: "images/products/mean-sneakes3.avif",
     category: "Men",
     size: ["5","7", "8", "9"],
     ratings: {
@@ -434,7 +434,7 @@ export const products = [
     name: "Mean Sport",
     brand: "Manato",
     priceCents: 38000,
-    image: "./images/products/mean-sports-shirt1.avif",
+    image: "images/products/mean-sports-shirt1.avif",
     category: "Men",
     size: ["M","L", "XL", "XXL"],
     ratings: {
@@ -454,7 +454,7 @@ export const products = [
     name: "Black Inferno shirt",
     brand: "Inferno",
     priceCents: 128000,
-    image: "./images/products/mean-sptorts-shirt.avif",
+    image: "images/products/mean-sptorts-shirt.avif",
     category: "Men",
     size: ["M","L", "XL", "XXL"],
     ratings: {
@@ -473,7 +473,7 @@ export const products = [
     name: "Black Pants",
     brand: "Inferno",
     priceCents: 328000,
-    image: "./images/products/mem8.avif",
+    image: "images/products/mem8.avif",
     category: "Men",
     size: ["M","L", "XL"],
     ratings: {
@@ -492,7 +492,7 @@ export const products = [
     name: "Men Cargo pants",
     brand: "Inferno",
     priceCents: 228000,
-    image: "./images/products/men -cargo-pants2.avif",
+    image: "images/products/men -cargo-pants2.avif",
     category: "Men",
     size: ["M","L", "XL"],
     ratings: {
@@ -511,7 +511,7 @@ export const products = [
     name: "Men Cargo shorts",
     brand: "Inferno",
     priceCents: 69999,
-    image: "./images/products/men-cargo-shorts.avif",
+    image: "images/products/men-cargo-shorts.avif",
     category: "Men",
     size: ["M","L", "XL"],
     ratings: {
@@ -530,7 +530,7 @@ export const products = [
     name: "Men Cargo shorts",
     brand: "Inferno",
     priceCents: 79999,
-    image: "./images/products/men-cargo-shorts1.avif",
+    image: "images/products/men-cargo-shorts1.avif",
     category: "Men",
     size: ["M","L", "XL"],
     ratings: {
@@ -549,7 +549,7 @@ export const products = [
     name: "Men Check shirt",
     brand: "Inferno",
     priceCents: 89999,
-    image: "./images/products/men-check-shirt.avif",
+    image: "images/products/men-check-shirt.avif",
     category: "Men",
     size: ["M","L", "XL"],
     ratings: {
@@ -567,7 +567,7 @@ export const products = [
     name: "Men Stament t-shirt",
     brand: "LA studio",
     priceCents: 69999,
-    image: "./images/products/Men-statement-t-shirt.avif",
+    image: "images/products/Men-statement-t-shirt.avif",
     category: "Men",
     size: ["M","L", "XL"],
     ratings: {
@@ -586,7 +586,7 @@ export const products = [
     name: "Men Nike jacket",
     brand: "Nike",
     priceCents: 350000,
-    image: "./images/products/men.avif",
+    image: "images/products/men.avif",
     category: "Men",
     size: ["M","L", "XL"],
     ratings: {
@@ -605,7 +605,7 @@ export const products = [
     name: "Men long sleev shirt",
     brand: "Nike",
     priceCents: 250000,
-    image: "./images/products/men2.avif",
+    image: "images/products/men2.avif",
     category: "Men",
     size: ["S","M","L","XL"],
     ratings: {
@@ -625,7 +625,7 @@ export const products = [
     name: "Baby shirt",
     brand: "Folo",
     priceCents: 250000,
-    image: "./images/products/2025wk36-mrp-homepage-baby.avif",
+    image: "images/products/2025wk36-mrp-homepage-baby.avif",
     category: "Baby",
     size: ["XS","S"],
     ratings: {
@@ -643,7 +643,7 @@ export const products = [
     name: "Big Kids clothes",
     brand: "Folo",
     priceCents: 250000,
-    image: "./images/products/2025wk36-mrp-homepage-big-kids.avif",
+    image: "images/products/2025wk36-mrp-homepage-big-kids.avif",
     category: "Big Kids",
     size: ["XS","S"],
     ratings: {
@@ -662,7 +662,7 @@ export const products = [
     name: "ladies clothes",
     brand: "Folo",
     priceCents: 250000,
-    image: "./images/products/2025wk36-mrp-homepage-ladies.avif",
+    image: "images/products/2025wk36-mrp-homepage-ladies.avif",
     category: "Ladies",
     size: ["S","M","L"],
     ratings: {
@@ -683,7 +683,7 @@ export const products = [
     name: "ladies clothes",
     brand: "Folo",
     priceCents: 250000,
-    image: "./images/products/2025wk36-mrp-homepage-pre-kids.avif",
+    image: "images/products/2025wk36-mrp-homepage-pre-kids.avif",
     category: "Pre Kids",
     size: ["S","M","L"],
     ratings: {
@@ -704,7 +704,7 @@ export const products = [
     name: "ladies clothes",
     brand: "Folo",
     priceCents: 250000,
-    image: "./images/products/2025wk36-mrp-homepage-shoes.avif",
+    image: "images/products/2025wk36-mrp-homepage-shoes.avif",
     category: "Ladies",
     size: ["S","M","L"],
     ratings: {
@@ -725,7 +725,7 @@ export const products = [
     name: "ladies clothes",
     brand: "Folo",
     priceCents: 250000,
-    image: "./images/products/2025wk36-mrp-homepage-sustainability.avif",
+    image: "images/products/2025wk36-mrp-homepage-sustainability.avif",
     category: "Sustainability",
     size: ["S","M","L"],
     ratings: {
@@ -746,7 +746,7 @@ export const products = [
     name: "Men red Jacket",
     brand: "Nike",
     priceCents: 250000,
-    image: "./images/products/men3.avif",
+    image: "images/products/men3.avif",
     category: "Men",
     size: ["S","M","L"],
     ratings: {
@@ -766,7 +766,7 @@ export const products = [
     name: "Men Graphic t-shirt",
     brand: "Nike",
     priceCents: 45000,
-    image: "./images/products/men4.avif",
+    image: "images/products/men4.avif",
     category: "Sustainability",
     size: ["S","M","L", "XL"],
     ratings: {
@@ -786,7 +786,7 @@ export const products = [
     name: "Men Black Jacket",
     brand: "Nike",
     priceCents: 200000,
-    image: "./images/products/men5.avif",
+    image: "images/products/men5.avif",
     category: "Men",
     size: ["S","M","L", "XL"],
     ratings: {
@@ -806,7 +806,7 @@ export const products = [
     name: "Men Black Jacket",
     brand: "Nike Jordan",
     priceCents: 250000,
-    image: "./images/products/men6.avif",
+    image: "images/products/men6.avif",
     category: "Men",
     size: ["S","M"],
     ratings: {
@@ -826,7 +826,7 @@ export const products = [
     name: "Men Black track pants",
     brand: "Nike Jordan",
     priceCents: 195000,
-    image: "./images/products/men7.avif",
+    image: "images/products/men7.avif",
     category: "Men",
     size: ["S","M","L"],
     ratings: {
@@ -847,7 +847,7 @@ export const products = [
     name: "Men track suit hoodie",
     brand: "Nike Jordan",
     priceCents: 115000,
-    image: "./images/products/men9.avif",
+    image: "images/products/men9.avif",
     category: "Men",
     size: ["S","M","L"],
     ratings: {
@@ -868,7 +868,7 @@ export const products = [
     name: "White 58 Air jordans",
     brand: "Nike Jordan",
     priceCents: 115000,
-    image: "./images/products/shies11.avif",
+    image: "images/products/shies11.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -889,7 +889,7 @@ export const products = [
     name: "Air max 374",
     brand: "Nike",
     priceCents: 450000,
-    image: "./images/products/shoes 10.avif",
+    image: "images/products/shoes 10.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -910,7 +910,7 @@ export const products = [
     name: "White Air Force 14",
     brand: "Nike",
     priceCents: 550999,
-    image: "./images/products/shoes1.avif",
+    image: "images/products/shoes1.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -931,7 +931,7 @@ export const products = [
     name: "White Air Force 17",
     brand: "Nike",
     priceCents: 650000,
-    image: "./images/products/shoes2.avif",
+    image: "images/products/shoes2.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -952,7 +952,7 @@ export const products = [
     name: "Air Max 917",
     brand: "Nike",
     priceCents: 455999,
-    image: "./images/products/shoes4.avif",
+    image: "images/products/shoes4.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -973,7 +973,7 @@ export const products = [
     name: "Pink Air Max 45",
     brand: "Nike",
     priceCents: 605000,
-    image: "./images/products/shoes5.avif",
+    image: "images/products/shoes5.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -994,7 +994,7 @@ export const products = [
     name: "Black Air force 10",
     brand: "Nike",
     priceCents: 505000,
-    image: "./images/products/shoes6.avif",
+    image: "images/products/shoes6.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1015,7 +1015,7 @@ export const products = [
     name: "Air Jordan 10",
     brand: "Nike Jordan",
     priceCents: 720999,
-    image: "./images/products/shoes7.avif",
+    image: "images/products/shoes7.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1036,7 +1036,7 @@ export const products = [
     name: "Blue Air Max 10",
     brand: "Nike",
     priceCents: 410000,
-    image: "./images/products/shoes8.avif",
+    image: "images/products/shoes8.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1057,7 +1057,7 @@ export const products = [
     name: "Pink Air Max 10",
     brand: "Nike",
     priceCents: 659999,
-    image: "./images/products/shoes9.avif",
+    image: "images/products/shoes9.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1078,7 +1078,7 @@ export const products = [
     name: "Jordan Air Max 46",
     brand: "Nike",
     priceCents: 658999,
-    image: "./images/products/shoes11.avif",
+    image: "images/products/shoes11.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1099,7 +1099,7 @@ export const products = [
     name: "Pink Air Max 31",
     brand: "Nike",
     priceCents: 700000,
-    image: "./images/products/shoes12.avif",
+    image: "images/products/shoes12.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1120,7 +1120,7 @@ export const products = [
     name: "White Floats 11",
     brand: "Mpahla",
     priceCents: 659999,
-    image: "./images/products/sneakers.avif",
+    image: "images/products/sneakers.avif",
     category: "Shoes",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1141,7 +1141,7 @@ export const products = [
     name: "Women shirt",
     brand: "Mpahla",
     priceCents: 399999,
-    image: "./images/products/wome2.avif",
+    image: "images/products/wome2.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1161,7 +1161,7 @@ export const products = [
     name: "Women white pants",
     brand: "Mpahla",
     priceCents: 299999,
-    image: "./images/products/women1.avif",
+    image: "images/products/women1.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1182,7 +1182,7 @@ export const products = [
     name: "Women Nike black top",
     brand: "Nike",
     priceCents: 599999,
-    image: "./images/products/women3.avif",
+    image: "images/products/women3.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1203,7 +1203,7 @@ export const products = [
     name: "Women Nike black top",
     brand: "Nike",
     priceCents: 399999,
-    image: "./images/products/women4.avif",
+    image: "images/products/women4.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1224,7 +1224,7 @@ export const products = [
     name: "Women Nike darkred top",
     brand: "Nike",
     priceCents: 399999,
-    image: "./images/products/women5.avif",
+    image: "images/products/women5.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1245,7 +1245,7 @@ export const products = [
     name: "Women Nike Jordan T-shirt",
     brand: "Nike",
     priceCents: 799999,
-    image: "./images/products/women6.avif",
+    image: "images/products/women6.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1266,7 +1266,7 @@ export const products = [
     name: "Women Nike T-shirt",
     brand: "Nike",
     priceCents: 599999,
-    image: "./images/products/women7.avif",
+    image: "images/products/women7.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1287,7 +1287,7 @@ export const products = [
     name: "Women Nike T-shirt",
     brand: "Nike",
     priceCents: 599999,
-    image: "./images/products/women8.avif",
+    image: "images/products/women8.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1308,7 +1308,7 @@ export const products = [
     name: "Women Nike Black pants",
     brand: "Nike",
     priceCents: 659999,
-    image: "./images/products/women9.avif",
+    image: "images/products/women9.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
@@ -1329,7 +1329,7 @@ export const products = [
     name: "Women Nike Brown top",
     brand: "Nike",
     priceCents: 759999,
-    image: "./images/products/women10.avif",
+    image: "images/products/women10.avif",
     category: "Ladies",
     size: ["S","M","L","XL"],
     ratings: {
