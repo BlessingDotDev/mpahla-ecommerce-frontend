@@ -1,0 +1,31 @@
+
+.added-row {
+  display: flex;
+}
+
+select {
+  align-self: start;
+  padding: 3px 1px;
+  border: 2px solid gray;
+  border-radius: 3px;
+  color: rgb(202, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+select option {
+  font-weight: bold;
+}
+
+.added-message {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  color: rgb(18, 134, 0);
+  opacity: 0;
+}
+
+/* Gonna use JS to add this name */
+.show-message {
+  opacity: 1;
+}
