@@ -7,7 +7,7 @@ export function HomePage() {
     <>
       <Header />
 
-       <HomePageGrid />
+       <HomePageGrid  />
 
       <Footer />
     </>

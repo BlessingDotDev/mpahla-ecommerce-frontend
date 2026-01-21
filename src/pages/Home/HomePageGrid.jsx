@@ -1,21 +1,35 @@
 import { Link } from "react-router";
-import products from "../../data/products.js";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { formatCurrency } from '../../scripts/utils/money.js';
 import "./HomePageGrid.scss";
 import "./between-shop-and-item.css"
 
 export function HomePageGrid() {
   
-  return (
-    <div className="grid-layout js-grid-layout">
+    const [products, setProducts] = useState([]);
+  
+    useEffect(() => {
+      const fetchProductsData = async () => {
+        const response = await axios.get('http://localhost:5000/api/products');
+        const data = response.data;
+  
+        setProducts(data);
+      }
+      
+      fetchProductsData();
+    }, []);
+    
+    return (
+      <div className="grid-layout js-grid-layout">
       {
         products.map((product) => {
           return (
-            <div key={product.id} className="product-container"
+            <div key={product._id} className="product-container"
 
             >
               <div className="product-image js-product-image"
-                data-product-id={product.id}>
+                data-product-id={product._id}>
                   <Link to="/item">
                     <img src={product.image} alt=""/>
                   </Link>
@@ -38,7 +52,7 @@ export function HomePageGrid() {
                 </p>
 
                 <div className="added-row">
-                  <select name="number" id="number" className="js-select-value-${product.id}">
+                  <select name="number" id="number" className="js-select-value-${product._id}">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -51,10 +65,10 @@ export function HomePageGrid() {
                     <option value="10">10</option>
                   </select>
 
-                  <span className={`added-message js-added-message-${product.id}`}>Added</span>
+                  <span className={`added-message js-added-message-${product._id}`}>Added</span>
                 </div>
 
-                <button className="add-to-cart-button js-add-to-cart-button" data-product-id={product.id}>
+                <button className="add-to-cart-button js-add-to-cart-button" data-product-id={product._id}>
                   Add to cart
                 </button>
               </div>

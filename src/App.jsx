@@ -10,7 +10,7 @@ import { NotFoundPage } from "./pages/Notfound/NotFoundPage.jsx";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<LandingPage  />} />
       <Route path="home" element={<HomePage />} />
       <Route path="item" element={<ItemPage />} />
       <Route path="checkout" element={<CheckoutPage />} />
