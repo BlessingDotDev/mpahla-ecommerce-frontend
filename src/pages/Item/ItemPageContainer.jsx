@@ -1,35 +1,38 @@
-import products from "../../data/products.js";
+import { useEffect } from "react";
+import { useParams } from "react-router";
 import { formatCurrency } from "../../scripts/utils/money.js";
 import "./ItemPageContainer.scss";
 
-export function ItemPageContainer() {
+export function ItemPageContainer({ products }) {
+  const { id } = useParams();
   let matchingProduct;
 
-  const itemId = "10756565a52514785236931f";
+  useEffect(() => {
+    products.forEach(product => {
+      if (id === product.id) {
+        matchingProduct = product;
+      }
+    })
 
-  products.forEach(product => {
-    if (itemId === product.id) {
-      matchingProduct = product;
-    }
-  })
+  }, []);
 
   return (
     <div className="main-container js-main-container">
 
       <div class="product-names display-product-names">
         <p class="product-brand">
-          ${matchingProduct.brand}
+          {matchingProduct.brand}
         </p>
         <p class="product-name">
-          ${matchingProduct.name}
+          {matchingProduct.name}
         </p>
         <p class="product-price">
-          R${formatCurrency(matchingProduct.priceCents)}
+          R{formatCurrency(matchingProduct.priceCents)}
         </p>
       </div>
 
       <button class="add-to-cart-button display-add-top-button js-add-to-cart-button"
-        data-product-id="${matchingProduct.id}"
+        data-product-id={matchingProduct.id}
       >
         Add to Cart
       </button>

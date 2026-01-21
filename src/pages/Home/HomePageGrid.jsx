@@ -36,7 +36,7 @@ export function HomePageGrid({ products, setProducts }) {
             >
               <div className="product-image js-product-image"
                 data-product-id={product._id}>
-                <Link to={`/item/${product.id}`} >
+                <Link to={`/item/${product._id}`} >
                   <img src={product.image} alt="" />
                 </Link>
               </div>
