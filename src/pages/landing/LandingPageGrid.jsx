@@ -1,43 +1,42 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import { Link } from "react-router";
-import products from "../../data/products";
-import productsCatagories  from "../../data/productCategories";
 
 export function LandingPageGrid() {
+  const [categories, setCategories] = useState([]);
 
-  function getMatchingProduct(category) {
-    let matchingProduct;
+  useEffect(() => {
+    const fetchCategoriesData = async () => {
+      const response = await axios.get('http://localhost:5000/api/category');
+      setCategories(response.data);
+    }
 
-    products.forEach(product => {
-      if (category.category === product.category) {
-        matchingProduct = product;
-      };
-    });
+    fetchCategoriesData();
+  }, []);
 
-    return matchingProduct;
+  const passParam = () => {
+
   }
 
   return (
-    
-      <div className="home-grid-layout js-home-grid-layout">
-        {
-          productsCatagories.map((category) => {
-            const matchingProduct = getMatchingProduct(category);
-            console.log(matchingProduct.image);
-            
-            return (
-              <Link to="/home" key={matchingProduct.id}>
-                <div className="content-container js-content-container"
-                  data-product-category={`${matchingProduct.category}`}>
-                  <img src={`${matchingProduct.image}`} alt="men content image" />
-                  <div className="content-link">
-                    <span>{`${category.category}`}</span>
-                    <p>&gt</p>
-                  </div>
+
+    <div className="home-grid-layout js-home-grid-layout">
+      {
+        categories.map((category) => {
+          return (
+            <Link to={`/home/${category.name}` } key={category.id} onClick={passParam}>
+              <div className="content-container js-content-container"
+                data-product-category={category.category}>
+                <img src={category.image} alt={category.name} />
+                <div className="content-link">
+                  <span>{category.name}</span>
+                  <p>&gt</p>
                 </div>
-              </Link>
-            )
-          })
-        }
-      </div>
+              </div>
+            </Link>
+          )
+        })
+      }
+    </div>
   );
 }
