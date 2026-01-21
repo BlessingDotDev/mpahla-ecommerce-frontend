@@ -1,13 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router";
 import { formatCurrency } from '../../scripts/utils/money.js';
 import "./HomePageGrid.scss";
 import "./between-shop-and-item.css"
 
-export function HomePageGrid() {
-  const [products, setProducts] = useState([]);
+export function HomePageGrid({ products, setProducts }) {
   const { name } = useParams();
 
   useEffect(() => {
@@ -27,9 +26,6 @@ export function HomePageGrid() {
     fetchProductsData();
   }, [name]);
 
-
-
-
   return (
     <div className="grid-layout js-grid-layout">
       {
@@ -40,7 +36,7 @@ export function HomePageGrid() {
             >
               <div className="product-image js-product-image"
                 data-product-id={product._id}>
-                <Link to="/item">
+                <Link to={`/item/${product.id}`} >
                   <img src={product.image} alt="" />
                 </Link>
               </div>
