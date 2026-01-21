@@ -1,27 +1,37 @@
-import { Link } from "react-router";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import { Link } from "react-router";
 import { formatCurrency } from '../../scripts/utils/money.js';
 import "./HomePageGrid.scss";
 import "./between-shop-and-item.css"
 
 export function HomePageGrid() {
-  
-    const [products, setProducts] = useState([]);
-  
-    useEffect(() => {
-      const fetchProductsData = async () => {
-        const response = await axios.get('http://localhost:5000/api/products');
-        const data = response.data;
-  
+  const [products, setProducts] = useState([]);
+  const { name } = useParams();
+
+  useEffect(() => {
+    const fetchProductsData = async () => {
+      const response = await axios.get("http://localhost:5000/api/products");
+      const data = response.data;
+
+      if (name) {
+        setProducts(
+          data.filter(product => product.category === name)
+        );
+      } else {
         setProducts(data);
       }
-      
-      fetchProductsData();
-    }, []);
-    
-    return (
-      <div className="grid-layout js-grid-layout">
+    };
+
+    fetchProductsData();
+  }, [name]);
+
+
+
+
+  return (
+    <div className="grid-layout js-grid-layout">
       {
         products.map((product) => {
           return (
@@ -30,9 +40,9 @@ export function HomePageGrid() {
             >
               <div className="product-image js-product-image"
                 data-product-id={product._id}>
-                  <Link to="/item">
-                    <img src={product.image} alt=""/>
-                  </Link>
+                <Link to="/item">
+                  <img src={product.image} alt="" />
+                </Link>
               </div>
               <div className="product-info">
                 <p className="product-name">
@@ -42,10 +52,10 @@ export function HomePageGrid() {
                   Nike-Jordan
                 </p>
                 <div className="product-ratings">
-                  <img className="rating-image" src={`/images/ratings/rating-${product.ratings.starts * 10}.png`} alt=""/>
-                    <span className="rating-count">
-                      {product.ratings.counts}
-                    </span>
+                  <img className="rating-image" src={`/images/ratings/rating-${product.ratings.starts * 10}.png`} alt="" />
+                  <span className="rating-count">
+                    {product.ratings.counts}
+                  </span>
                 </div>
                 <p className="product-price">
                   R{formatCurrency(product.priceCents)}
