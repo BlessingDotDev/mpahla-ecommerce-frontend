@@ -1,6 +1,6 @@
-import { OrdersHeader } from './OrdersHeader.jsx';
+//import { OrdersHeader } from './OrdersHeader.jsx';
 import { OrdersDetailsGrid } from './OrdersDetailsGrid.jsx';
-
+/*
 
 export function OrdersGrid({ orders, loadCart }) {
   return (
@@ -16,6 +16,24 @@ export function OrdersGrid({ orders, loadCart }) {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+*/
+export function OrdersGrid() {
+  return (
+    <div className="orders-grid">
+    
+        return (
+          <div  className="order-container">
+
+
+            <OrdersDetailsGrid  />
+
+          </div>
+        );
+ 
     </div>
   );
 }

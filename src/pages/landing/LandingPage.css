@@ -110,6 +110,7 @@
     }
   }
   
+  
   @media only screen and (max-width: 600px) {
     .home-grid-layout {
       grid-template-columns: 1fr;
@@ -123,5 +124,4 @@
     .background-overlay button {
       font-size: 20px
     }
-
   }

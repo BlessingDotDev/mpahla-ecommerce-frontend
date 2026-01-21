@@ -1,4 +1,4 @@
-import dayjs from 'dayjs';
+/*import dayjs from 'dayjs';
 import axios from 'axios';
 import { Fragment } from 'react';
 import BuyAgainIcon from '../../assets/images/icons/buy-again.png';
@@ -54,5 +54,12 @@ export function OrdersDetailsGrid({ order, loadCart }) {
         );
       })}
     </div>
+  );
+}
+*/
+
+export function OrdersDetailsGrid() {
+  return (
+    <div>Hello</div>
   );
 }
