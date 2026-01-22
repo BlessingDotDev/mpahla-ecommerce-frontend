@@ -7,6 +7,7 @@ import cartIcon from "../assets/images/icons/shopping-cart.svg";
 import "./Header.css";
 
 export function Header({ cart }) {
+
   let totalQuantity = 0;
   if (cart) {
   

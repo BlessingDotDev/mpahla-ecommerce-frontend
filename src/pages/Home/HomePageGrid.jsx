@@ -11,7 +11,7 @@ export function HomePageGrid({ products, setProducts }) {
 
   useEffect(() => {
     const fetchProductsData = async () => {
-      const response = await axios.get("http://localhost:5000/api/products");
+      const response = await axios.get("/api/products");
       const data = response.data;
 
       if (name) {

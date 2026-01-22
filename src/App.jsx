@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react"; 
 import { Routes, Route } from "react-router";
 import { LandingPage } from "./pages/landing/LandingPage";
 import { HomePage } from "./pages/Home/HomePage"
@@ -10,16 +11,32 @@ import { NotFoundPage } from "./pages/Notfound/NotFoundPage.jsx";
 
 function App() {
   const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
+  
+    useEffect(() => {
+      const fetchCartData = async () => {
+        const response = await axios.get('http://localhost:5000/api/cart');
+        setCart(response.data);
+        console.log(response.data)
+      }
+  
+      fetchCartData();
+    }, []);
+  
 
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route 
+        path="/" 
+        element={<LandingPage 
+          cart={ cart } />} />
       
       <Route 
         path="home/:name?" 
         element={<HomePage 
           products={products} 
           setProducts={setProducts}/>} 
+          cart={cart}
       />
       <Route 
         path="item/:id" 
