@@ -6,7 +6,16 @@ import cartIcon from "../assets/images/icons/shopping-cart.svg";
 
 import "./Header.css";
 
-export function Header() {
+export function Header({ cart }) {
+  let totalQuantity = 0;
+  if (cart) {
+  
+    cart.forEach(cartItem => {
+      totalQuantity += cartItem.quantity;
+    })
+
+  }
+
   return (
     <header>
       <div className="header-container">
@@ -36,7 +45,7 @@ export function Header() {
           <Link to="/checkout">
             <div className="cart-container">
               <img src={cartIcon} alt="cart icon" />
-              <div className="cart-item js-cart-item">0</div>
+              <div className="cart-item js-cart-item">{totalQuantity}</div>
             </div>
           </Link>
         </div>
