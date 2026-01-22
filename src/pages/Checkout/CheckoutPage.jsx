@@ -14,6 +14,8 @@ export function CheckoutPage() {
           Review your order
         </h2>
 
+        <h1 className="checkout-items">Items:(<span className="items js-items">0</span>)</h1>
+    
         <div className="main-grid">
           <CartSummary />
           <OrderSummary />

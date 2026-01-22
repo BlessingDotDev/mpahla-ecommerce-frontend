@@ -15,10 +15,6 @@ export function CheckoutPageHeader() {
           </Link>
         </div>
 
-        <div className="header-right-section">
-          <p className="checkout-items">Checkout (<span className="items js-items">0</span> items)</p>
-        </div>
-
         <div className="right-section">
           <Link to="/orders">
             <div className="cart-container primary-icon">

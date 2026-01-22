@@ -1,4 +1,4 @@
-.main-container {
+.main-item-container {
   width: 95%;
   max-width: 1200px;
   margin: 30px auto;
@@ -8,15 +8,14 @@
   column-gap: 30px;
 }
 
-.main-container {
+.main-item-container {
 
-  /* Display on small sreen */
   .display-product-names {
     display: none;
   }
 
   .image-container {
-    max-width: 600px;
+    max-width: 550px;
   }
 
   .product-image {
@@ -167,46 +166,6 @@
   }
 
 
-  @media only screen and (max-width: 900px) {
-    .main-container {
-      width: 100%;
-      flex-direction: column;
-    }
-
-    .product-names {
-      display: none;
-    }
-
-    .display-product-names {
-      display: initial;
-      margin-bottom: 10px;
-      margin-left: 20px;
-    }
-
-    .image-container {
-      max-width: 100%;
-    }
-
-    .product-info {
-      padding: 40px 20px;
-      width: 100%;
-    }
-
-    .size-options li {
-      flex: 1;
-    }
-
-    .display-add-top-button {
-      display: initial;
-
-      position: fixed;
-      bottom: 0;
-
-      border-radius: 0px;
-      height: 70px;
-      margin: 0;
-    }
-  }
   /* shared before */
   
 .added-row {
@@ -240,3 +199,60 @@ select option {
   opacity: 1;
 }
 }
+
+  @media only screen and (max-width: 900px) {
+    .main-item-container {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .main-item-container {
+      
+          .product-names {
+            display: none;
+          }
+      
+          .display-product-names {
+            display: initial;
+            margin-bottom: 10px;
+            margin-left: 20px;
+          }
+      
+          .image-container {
+            max-width: 100%;
+          }
+      
+          .product-info {
+            padding: 40px 20px;
+            width: 100%;
+          }
+      
+          .size-options li {
+            flex: 1;
+          }
+      
+          .display-add-top-button {
+            display: initial;
+      
+            position: fixed;
+            bottom: 0;
+      
+            border-radius: 0px;
+            height: 70px;
+            margin: 0;
+          }
+
+    }
+  }
+
+   @media (min-width: 600px) {
+
+    .main-item-container {
+      
+          .product-names {
+            margin-top: 20px;
+            margin-bottom: 0;
+          }
+
+    }
+  }

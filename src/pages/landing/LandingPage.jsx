@@ -6,7 +6,6 @@ import "./LandingPage.css"
 import bg from "../../assets/images/2025wk36-mrp-gender-mens-spot-a.avif"
 
 export function LandingPage() {
-  console.log('hello');
   return (
     <>
       <Header />
