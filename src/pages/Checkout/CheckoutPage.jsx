@@ -1,24 +1,47 @@
-import { CheckoutPageHeader } from "./CheckoutPageHeader";
-import { CartSummary } from "./CartSummary";
-import { OrderSummary } from "./OrderSummary";
-import './CheckoutPage.scss';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { CheckoutHeader } from './CheckoutHeader';
+import { OrderSummary } from './OrderSummary.jsx';
+import { PaymentSummary } from './PaymentSummary.jsx';
+import './CheckoutPage.css';
 
-export function CheckoutPage({ totalQuantity }) {
+export function CheckoutPage({ cart, loadCart }) {
+  const [deliveryOptions, setDeliveryOptions] = useState([]);
+  const [paymentSummary, setPaymentSummary] = useState(null);
+
+  useEffect(() => {
+    const fetchCheckoutData = async () => {
+      const response = await axios.get('/api/deliveryoptions');
+      setDeliveryOptions(response.data);
+    }
+
+    fetchCheckoutData();
+  }, []);
+
+  useEffect(() => {
+    const fetchPaymentSummary = async () => {
+      const response = await axios.get('/api/payment/summary');
+      setPaymentSummary(response.data)
+    }
+
+    fetchPaymentSummary();
+  }, [cart])
 
   return (
-
     <>
-      <CheckoutPageHeader totalQuantity={totalQuantity} />
+      <link rel="icon" type="image/svg+xml" href="cart-favicon.png" />
 
-      <div className="checkout-main-container">
-        <h2 className="page-title">
-          Review your order
-        </h2>
-        <h2> Items: {totalQuantity} </h2>
-    
-        <div className="main-grid">
-          <CartSummary />
-          <OrderSummary />
+      <title>Checkout</title>
+
+      <CheckoutHeader cart={cart} />
+0
+      <div className="checkout-page">
+        <div className="page-title">Review your order</div>
+
+        <div className="checkout-grid">
+          <OrderSummary cart={cart} deliveryOptions={deliveryOptions} loadCart={loadCart}/>
+
+          <PaymentSummary paymentSummary={paymentSummary} loadCart={loadCart}/>
         </div>
       </div>
     </>

@@ -46,7 +46,8 @@ function App() {
       <Route 
         path="item/:id" 
         element={<ItemPage 
-         totalQuantity={totalQuantity}/>} />
+          cart={cart}
+          totalQuantity={totalQuantity}/>} />
 
       <Route path="checkout" element={<CheckoutPage cart={cart} />} />
       <Route path="orders" element={< OrdersPage />} />
