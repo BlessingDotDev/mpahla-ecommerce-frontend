@@ -8,20 +8,27 @@ import { CheckoutPage } from "./pages/Checkout/CheckoutPage";
 import { OrdersPage } from "./pages/orders/OrdersPage";
 import { TrackingPage } from "./pages/Tracking/TrackingPage";
 import { NotFoundPage } from "./pages/Notfound/NotFoundPage.jsx";
+import { getTotalQuantity } from "./utils/getTotalQuantity.js";
 
 function App() {
-  const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [totalQuantity, setTotalQuantity] = useState(0);
   
     useEffect(() => {
       const fetchCartData = async () => {
         const response = await axios.get('http://localhost:5000/api/cart');
         setCart(response.data);
-        console.log(response.data)
       }
   
       fetchCartData();
     }, []);
+    
+    useEffect(() => {
+      const totalQuantity =  getTotalQuantity(cart);
+      setTotalQuantity(totalQuantity);
+      
+    }, [cart]);
+    
   
 
   return (
@@ -29,22 +36,19 @@ function App() {
       <Route 
         path="/" 
         element={<LandingPage 
-          cart={ cart } />} />
+          totalQuantity={ totalQuantity } />} />
       
       <Route 
         path="home/:name?" 
-        element={<HomePage 
-          products={products} 
-          setProducts={setProducts}/>} 
-          cart={cart}
+        element={<HomePage />} 
+          totalQuantity={totalQuantity}
       />
       <Route 
         path="item/:id" 
         element={<ItemPage 
-          products={products} 
-            setProducts={setProducts}/>} />
+         totalQuantity={totalQuantity}/>} />
 
-      <Route path="checkout" element={<CheckoutPage />} />
+      <Route path="checkout" element={<CheckoutPage cart={cart} />} />
       <Route path="orders" element={< OrdersPage />} />
       <Route path="tracking" element={<TrackingPage />} />
       <Route path="#" element={<NotFoundPage />} />

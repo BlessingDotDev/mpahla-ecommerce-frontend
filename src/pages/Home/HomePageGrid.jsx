@@ -14,17 +14,12 @@ export function HomePageGrid({ products, setProducts }) {
       const response = await axios.get("/api/products");
       const data = response.data;
 
-      if (name) {
-        setProducts(
-          data.filter(product => product.category === name)
-        );
-      } else {
-        setProducts(data);
-      }
+      name && setProducts(data.filter(product => product.category === name));
+      !name && setProducts(data);
     };
 
     fetchProductsData();
-  }, [name]);
+  }, [name, setProducts]);
 
   return (
     <div className="grid-layout js-grid-layout">

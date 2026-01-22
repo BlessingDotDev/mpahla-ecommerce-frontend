@@ -17,7 +17,7 @@ export function ItemPageContainer() {
     }
 
     fetchData();
-  }, []);
+  }, [id]);
 
   if (!product) {
     return (

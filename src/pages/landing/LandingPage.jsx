@@ -5,10 +5,10 @@ import { LandingPageGrid } from "./LandingPageGrid";
 import "./LandingPage.css"
 import bg from "../../assets/images/2025wk36-mrp-gender-mens-spot-a.avif"
 
-export function LandingPage() {
+export function LandingPage({totalQuantity}) {
   return (
     <>
-      <Header />
+      <Header totalQuantity={totalQuantity} />
 
       <title>Mpahla Online Store</title>
 
