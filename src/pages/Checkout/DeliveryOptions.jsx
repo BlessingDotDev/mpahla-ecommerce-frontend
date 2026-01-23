@@ -15,21 +15,22 @@ export function DeliveryOptions({deliveryOptions, cartItem, loadCart}) {
           priceString = `${formartCurrency(deliveryOption.priceCents)} - Shipping`
         }
 
-        const updateDeliveryOptions = async () => {
-          await axios.put(`/api/cart-items/${cartItem.productId}`, {
-            deliveryOptionId: deliveryOption.id
+        const updateDeliveryOptions = async (deliveryOptionId) => {
+          await axios.put(`/api/cart/${cartItem._id}`, {
+            quantity: cartItem.quantity,
+            deliveryOptionId: deliveryOptionId
           })
           await loadCart();
         }
 
         return (
-          <div key={deliveryOption.id} className="delivery-option"
-            onClick={updateDeliveryOptions}>
+          <div key={deliveryOption._id} className="delivery-option"
+            onClick={() => updateDeliveryOptions(deliveryOption._id)}>
             <input type="radio"
-              checked={deliveryOption.id === cartItem.deliveryOptionId}
+              checked={deliveryOption._id === cartItem.deliveryOption._id}
               onChange={() => {}}
               className="delivery-option-input"
-              name={`delivery-option-${cartItem.productId}`} />
+              name={`delivery-option-${cartItem.deliveryOption_id}`} />
             <div>
               <div className="delivery-option-date">
                 {dayjs(deliveryOption.estimatedDeliveryTimeMs).format('dddd, MMMM D')}

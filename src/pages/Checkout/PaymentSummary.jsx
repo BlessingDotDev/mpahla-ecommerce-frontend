@@ -20,23 +20,23 @@ export function PaymentSummary({paymentSummary, loadCart}) {
       {paymentSummary && (
         <>
           <div className="payment-summary-row">
-            <div>Items ({paymentSummary.totalItems}):</div>
+            <div>Items ({paymentSummary.quantity}):</div>
             <div className="payment-summary-money">
-              {formartCurrency(paymentSummary.productCostCents)}
+              {formartCurrency(paymentSummary.productPriceCents)}
             </div>
           </div>
 
           <div className="payment-summary-row">
             <div>Shipping &amp; handling:</div>
             <div className="payment-summary-money">
-              {formartCurrency(paymentSummary.shippingCostCents)}
+              {formartCurrency(paymentSummary.shippingPriceCents)}
             </div>
           </div>
 
           <div className="payment-summary-row subtotal-row">
             <div>Total before tax:</div>
             <div className="payment-summary-money">
-              {formartCurrency(paymentSummary.totalCostBeforeTaxCents)}
+              {formartCurrency(paymentSummary.totalBeforeTax)}
             </div>
           </div>
 
@@ -50,7 +50,7 @@ export function PaymentSummary({paymentSummary, loadCart}) {
           <div className="payment-summary-row total-row">
             <div>Order total:</div>
             <div className="payment-summary-money">
-              {formartCurrency(paymentSummary.totalCostCents)}
+              {formartCurrency(paymentSummary.totalCents)}
             </div>
           </div>
 

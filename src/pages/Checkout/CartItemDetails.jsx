@@ -4,7 +4,7 @@ import { formartCurrency } from "../../utils/money.js";
 export function CartItemDetails({ cartItem, loadCart }) {
 
   const deleteCartItem = async () => {
-    await axios.delete(`/api/cart-items/${cartItem.productId}`);
+    await axios.delete(`/api/cart/${cartItem._id}`);
     await loadCart();
   }
 
