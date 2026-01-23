@@ -1,35 +1,38 @@
-import { Link } from 'react-router';
-import CheckoutLockIcon from '../../assets/images/icons/checkout-lock-icon.png';
-import Logo from '../../assets/images/logo.png';
-import MobileLogo from '../../assets/images/mobile-logo.png';
-import './CheckoutHeader.css';
+import { Link } from "react-router";
+import { HeaderUser } from "../../components/HeaderUser";
+import menuIcon from "../../assets/images/icons/menu.svg";
+import searchIcon from "../../assets/images/icons/search.svg";
+import cartIcon from "../../assets/images/icons/pocket.svg";
 
-export function CheckoutHeader({ cart }) {
-  let totalQuantity = 0;
+import "./CheckoutHeader.css";
 
-  cart.forEach((cartItem) => {
-    totalQuantity += cartItem.quantity;
-  })
-
+export function CheckoutHeader() {
   return (
-    <div className="checkout-header">
-      <div className="header-content">
-        <div className="checkout-header-left-section">
+    <header>
+      <div className="header-container">
+        <div className="logo-section">
+          <img className="menu-icon" src={menuIcon} alt="" />
           <Link to="/">
-            <img className="logo" src={Logo} />
-            <img className="mobile-logo" src={MobileLogo} />
+            <span className="logo-name">
+              <span className="logo-letter">M</span>p<span className="logo-letter">a</span>hl<span className="logo-letter">a</span>
+            </span>
           </Link>
         </div>
+        
+        <div className="header-right-section">
+          <div className="search-icon js-search-icon">
+            <img src={searchIcon} />
+          </div>
 
-        <div className="checkout-header-middle-section">
-          Checkout (<a className="return-to-home-link"
-            href="/">{totalQuantity} items</a>)
-        </div>
+          <HeaderUser />
 
-        <div className="checkout-header-right-section">
-          <img src={CheckoutLockIcon}/>
+          <Link to="/orders">
+            <div className="cart-container">
+              <img src={cartIcon} alt="cart icon" />
+            </div>
+          </Link>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
