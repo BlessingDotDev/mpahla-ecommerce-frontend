@@ -8,7 +8,8 @@ import { Loading } from "../../components/Loading";
 export function ItemPageContainer({loadCart}) {
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [deliveryOption, setDeliveryOption] = useState('6971e3c1535c8bfb31e97d7c')
+  const [deliveryOption, setDeliveryOption] = useState('6971e3c1535c8bfb31e97d7c');
+  const [isAdded, setIsAdded] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
@@ -37,6 +38,11 @@ export function ItemPageContainer({loadCart}) {
 
   const handleChange = (event) => {
     setQuantity(Number(event.target.value));
+  }
+
+  const handleClick = () => {
+    setIsAdded(!isAdded)
+    console.log(isAdded)
   }
 
   if (!product) {
@@ -79,7 +85,7 @@ export function ItemPageContainer({loadCart}) {
               {product.name}
             </p>
             <p className="product-price">
-              R{formatCurrency(product.priceCents)}
+              {formatCurrency(product.priceCents)}
             </p>
           </div>
   
@@ -98,12 +104,14 @@ export function ItemPageContainer({loadCart}) {
             </div>
   
             <ul className="size-options">
-              <li className="js-size-button">XS</li>
-              <li className="js-size-button">S</li>
-              <li className="js-size-button">M</li>
-              <li className="js-size-button">L</li>
-              <li className="js-size-button">XL</li>
-              <li className="js-size-button">XXL</li>
+              {
+                product.size.map((siz) => (
+                  <li 
+                    key={siz}
+                    className={isAdded ? 'size-button' : 'chosen-size' } 
+                    onClick={ handleClick }>{siz}</li>
+                ))
+              }
             </ul>
   
             <div className="added-row">
