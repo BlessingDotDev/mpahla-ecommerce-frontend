@@ -13,14 +13,14 @@ import { getTotalQuantity } from "./utils/getTotalQuantity.js";
 function App() {
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
-  
-    useEffect(() => {
-      const fetchCartData = async () => {
+
+  const loadCart = async () => {
         const response = await axios.get('http://localhost:5000/api/cart');
         setCart(response.data);
       }
   
-      fetchCartData();
+    useEffect(() => {
+      loadCart();
     }, []);
     
     useEffect(() => {
@@ -46,8 +46,9 @@ function App() {
       <Route 
         path="item/:id" 
         element={<ItemPage 
-          cart={cart}
-          totalQuantity={totalQuantity}/>} />
+          totalQuantity={totalQuantity}
+          loadCart={loadCart}/>} 
+      />
 
       <Route path="checkout" element={<CheckoutPage cart={cart} />} />
       <Route path="orders" element={< OrdersPage />} />

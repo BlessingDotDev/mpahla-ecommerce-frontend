@@ -5,8 +5,10 @@ import { formatCurrency } from "../../scripts/utils/money.js";
 import "./ItemPageContainer.scss";
 import { Loading } from "../../components/Loading";
 
-export function ItemPageContainer() {
+export function ItemPageContainer({loadCart}) {
   const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [deliveryOption, setDeliveryOption] = useState('6971e3c1535c8bfb31e97d7c')
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,6 +19,25 @@ export function ItemPageContainer() {
 
     fetchData();
   }, [id]);
+
+  const addToCart = async(product, quantity, deliveryOption) => {
+     try {
+      const res = await axios.post('/api/cart', {
+        product: product._id, 
+        quantity: 1,
+        deliveryOption: '6971e3c1535c8bfb31e97d7c'
+      });
+
+      await loadCart();
+      console.log('Added to cart:', res.data);
+    } catch (err) {
+      console.error('Add to cart failed:', err.response?.data || err.message);
+    }
+  }
+
+  const handleChange = (event) => {
+    setQuantity(Number(event.target.value));
+  }
 
   if (!product) {
     return (
@@ -40,19 +61,7 @@ export function ItemPageContainer() {
   
         <button className="add-to-cart-button display-add-top-button js-add-to-cart-button"
           data-product-id={product._id}
-          onClick={async () => {
-          try {
-            const res = await axios.post('/api/cart', {
-              product: product._id, 
-              quantity: 1,
-              deliveryOption: '6971e3c1535c8bfb31e97d7c'
-            });
-
-            console.log('Added to cart:', res.data);
-          } catch (err) {
-            console.error('Add to cart failed:', err.response?.data || err.message);
-          }
-        }}
+          onClick={() => addToCart(product, quantity, deliveryOption)}
         >
           Add to Cart
         </button>
@@ -98,7 +107,12 @@ export function ItemPageContainer() {
             </ul>
   
             <div className="added-row">
-              <select name="number" id="number" className="js-select-value-${product.id}">
+              <select 
+                name="number" 
+                id="number" 
+                className="js-select-value-${product.id}"
+                onChange={handleChange}
+              >
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -116,19 +130,7 @@ export function ItemPageContainer() {
   
             <button className="add-to-cart-button js-add-to-cart-button"
               data-product-id={product._id}
-              onClick={async () => {
-              try {
-                const res = await axios.post('/api/cart', {
-                  product: product._id, 
-                  quantity: 1,
-                  deliveryOption: '6971e3c1535c8bfb31e97d7c'
-                });
-
-                console.log('Added to cart:', res.data);
-              } catch (err) {
-                console.error('Add to cart failed:', err.response?.data || err.message);
-              }
-            }}
+              onClick={() => addToCart(product, quantity, deliveryOption)}
             >
               Add to Cart
             </button>
