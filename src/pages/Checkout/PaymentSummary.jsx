@@ -6,9 +6,14 @@ export function PaymentSummary({paymentSummary, loadCart}) {
   const navigate = useNavigate();
 
   const createOrder = async () => {
-    await axios.post('/api/orders');
-    await loadCart();
-    navigate('/orders')
+    try {
+      await axios.post('/api/orders');
+      await loadCart();
+      navigate('/orders')
+
+    } catch(error) {
+      console.log('there was an error', error)
+    }
   }
 
   return (
