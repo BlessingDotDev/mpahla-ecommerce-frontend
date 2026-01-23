@@ -1,9 +1,9 @@
-export function formatCurrency(priceCents) {
+export function formartCurrency(priceCents) {
 
-  return (priceCents / 100).toFixed(2);
+ // return (priceCents / 100).toFixed(2);
 
-/* format to south african currency format
-   The right way to go about this
+ //format to south african currency format
+   //The right way to go about this
 
 const amount = (priceCents / 100).toFixed(2);
 
@@ -14,5 +14,5 @@ Intl.NumberFormat('en-ZA', {
 }).format(amount)
 
 return formartted;
-*/
+
 }
