@@ -1,4 +1,4 @@
-/*import dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import { formartCurrency } from '../../utils/money.js';
 
 export function OrdersHeader({ order }) {
@@ -29,5 +29,3 @@ export function OrdersHeader({ order }) {
     </div>
   );
 }
-
-*/

@@ -5,7 +5,7 @@ import { LandingPage } from "./pages/landing/LandingPage";
 import { HomePage } from "./pages/Home/HomePage"
 import { ItemPage } from "./pages/Item/ItemPage";
 import { CheckoutPage } from "./pages/Checkout/CheckoutPage";
-import { OrdersPage } from "./pages/orders/OrdersPage";
+import { OrdersPage } from "./pages/Orders/OrdersPage.jsx";
 import { TrackingPage } from "./pages/Tracking/TrackingPage";
 import { NotFoundPage } from "./pages/Notfound/NotFoundPage.jsx";
 import { getTotalQuantity } from "./utils/getTotalQuantity.js";
@@ -57,7 +57,13 @@ function App() {
           loadCart={loadCart}
           totalQuantity={totalQuantity} />} 
       />
-      <Route path="orders" element={< OrdersPage />} />
+      <Route 
+        path="orders" 
+        element={< OrdersPage 
+          cart={cart} 
+          loadCart={loadCart}/>} 
+      />
+
       <Route path="tracking" element={<TrackingPage />} />
       <Route path="#" element={<NotFoundPage />} />
     </Routes>
