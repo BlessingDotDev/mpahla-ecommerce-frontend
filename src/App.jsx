@@ -64,7 +64,7 @@ function App() {
           loadCart={loadCart}/>} 
       />
 
-      <Route path="tracking" element={<TrackingPage />} />
+      <Route path="tracking/:orderid?/:productid?" element={<TrackingPage cart={cart} />} />
       <Route path="#" element={<NotFoundPage />} />
     </Routes>
   );

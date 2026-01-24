@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import axios from 'axios';
+import { Link } from 'react-router';
 import { Fragment } from 'react';
 import BuyAgainIcon from '../../assets/images/icons/buy-again.png';
 
@@ -44,11 +45,11 @@ export function OrdersDetailsGrid({ order, loadCart }) {
             </div>
 
             <div className="product-actions">
-              <a href={`/tracking/${order.id}/${orderProduct.product.id}`}>
+              <Link to={`/tracking/${order.id}/${orderProduct.product.id}`}>
                 <button className="track-package-button button-secondary">
                   Track package
                 </button>
-              </a>
+              </Link>
             </div>
           </Fragment>
         );

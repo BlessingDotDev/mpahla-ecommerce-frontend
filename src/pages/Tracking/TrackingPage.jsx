@@ -11,7 +11,7 @@ export function TrackingPage({ cart }) {
 
   useEffect(() => {
     const fetchTrackingData = async () => {
-      const response = await axios(`/api/orders/${orderId}?expand=products`)
+      const response = await axios(`/api/orders/${orderId}`)
       setOrder(response.data)
     }
 
