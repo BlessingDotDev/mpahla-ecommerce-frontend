@@ -1,11 +1,14 @@
+import axios from 'axios';
 import dayjs from 'dayjs';
 import { formartCurrency } from '../../utils/money.js';
 import {useEffect} from 'react';
 
-export function OrdersHeader({ order }) {
-  useEffect(() => {
-    console.log(order)
-  })
+export function OrdersHeader({ order, loadOrder }) {
+
+  const deleteorder = async (orderId) => {
+    await axios.delete(`api/orders/${orderId}`);
+    await loadOrder;
+  }
 
   return (
 
@@ -30,6 +33,9 @@ export function OrdersHeader({ order }) {
         <div>
           {order._id}
         </div>
+          <button className="order-delete-button" onClick={() => deleteorder(order._id)}>
+            Delete Oder
+          </button>
       </div>
     </div>
   );

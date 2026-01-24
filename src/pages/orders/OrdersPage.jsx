@@ -6,15 +6,15 @@ import './OrdersPage.css';
 
 export function OrdersPage({ cart, loadCart, totalQuantity }) {
   const [orders, setOrders] = useState([]);
+  
+  const loadOrder = async () => {
+  const response = await axios.get('api/orders');
+  setOrders(response.data);
+  }
 
   useEffect(() => {
-    const fetchOrderData = async () => {
-    const response = await axios.get('api/orders');
-    setOrders(response.data);
-    }
-
-    fetchOrderData();
-  }, []);
+    loadOrder();
+  }, [orders]);
 
   return (
     <>
@@ -27,7 +27,7 @@ export function OrdersPage({ cart, loadCart, totalQuantity }) {
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
         
-        <OrdersGrid orders={orders} loadCart={loadCart} />
+        <OrdersGrid orders={orders} loadCart={loadCart} loadOrder={loadOrder}/>
       </div>
     </>
   );

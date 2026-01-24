@@ -28,11 +28,27 @@
   margin-bottom: 3px;
 }
 
+/*
 .tracking-page .product-image {
   max-width: 150px;
   max-height: 150px;
   margin-top: 25px;
   margin-bottom: 50px;
+}
+*/
+.tracking-page .product-image {
+  display: block;
+  margin: 40px auto 50px auto;
+  max-width: 180px;
+  max-height: 180px;
+  object-fit: contain;
+
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .tracking-page .progress-labels-container {
@@ -75,7 +91,7 @@
 
 .tracking-page .progress-bar {
   height: 100%;
-  background-color: rgb(25, 135, 84);
+  background-color: rgb(177, 126, 255);
   border-radius: 50px;
   width: 50%;
 }

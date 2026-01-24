@@ -41,7 +41,6 @@ function App() {
       <Route 
         path="home/:name?" 
          element={<HomePage totalQuantity={totalQuantity} />} 
-        
       />
       <Route 
         path="item/:id" 
@@ -49,7 +48,6 @@ function App() {
           totalQuantity={totalQuantity}
           loadCart={loadCart}/>} 
       />
-
       <Route 
         path="checkout" 
         element={<CheckoutPage 
@@ -64,8 +62,11 @@ function App() {
           loadCart={loadCart}
           totalQuantity={totalQuantity}/>} 
       />
-
-      <Route path="tracking/:orderid?/:productid?" element={<TrackingPage cart={cart} />} />
+      <Route  
+        path="tracking/:orderId/:productId" 
+        element={<TrackingPage 
+          totalQuantity={totalQuantity} />} 
+      />
       <Route path="#" element={<NotFoundPage />} />
     </Routes>
   );

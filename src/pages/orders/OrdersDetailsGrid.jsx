@@ -4,23 +4,24 @@ import { Link } from 'react-router';
 import { Fragment } from 'react';
 import BuyAgainIcon from '../../assets/images/icons/buy-again.png';
 
-export function OrdersDetailsGrid({ order, loadCart }) {
+export function OrdersDetailsGrid({ order, loadCart}) {
   
   return (
     <div className="order-details-grid">
       {order.products.map((orderProduct) => {
       
         const addToCart = async () => {
-          await axios.post('/api/cart-items', {
-            productId: orderProduct.product.id,
-            quantity: 1
+          await axios.post('/api/cart', {
+            product: orderProduct.product._id,
+            quantity: 1,
+            deliveryOption: '6971e3c1535c8bfb31e97d7c'
           })
 
           await loadCart();
         }
 
         return (
-          <Fragment key={orderProduct.product.id} >
+          <Fragment key={orderProduct.product._id}>
             <div className="product-image-container">
               <img src={orderProduct.product.image} />
             </div>
@@ -45,12 +46,13 @@ export function OrdersDetailsGrid({ order, loadCart }) {
             </div>
 
             <div className="product-actions">
-              <Link to={`/tracking/${order.id}/${orderProduct.product.id}`}>
+              <Link to={`/tracking/${order._id}/${orderProduct.product._id}`}>
                 <button className="track-package-button button-secondary">
                   Track package
                 </button>
               </Link>
             </div>
+
           </Fragment>
         );
       })}

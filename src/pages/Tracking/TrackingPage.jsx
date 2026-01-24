@@ -5,14 +5,15 @@ import { Link, useParams } from 'react-router';
 import { Header } from '../../components/Header';
 import './TrackingPage.css'
 
-export function TrackingPage({ cart }) {
+export function TrackingPage({ totalQuantity }) {
   const [order, setOrder] = useState(null);
   const { orderId, productId } = useParams();
-
+  
   useEffect(() => {
     const fetchTrackingData = async () => {
-      const response = await axios(`/api/orders/${orderId}`)
-      setOrder(response.data)
+      const response = await axios.get(`api/orders/${orderId}`)
+      setOrder(response.data);
+      console.log(response.data);
     }
 
     fetchTrackingData();
@@ -44,11 +45,11 @@ export function TrackingPage({ cart }) {
 
       <title>Tracking</title>
 
-      <Header cart={cart} />
+      <Header totalQuantity={totalQuantity} />
 
       <div className="tracking-page">
         <div className="order-tracking">
-          <Link className="back-to-orders-link link-primary" to="/tracking">
+          <Link className="back-to-orders-link link-primary" to="/orders">
             View all orders
           </Link>
 
