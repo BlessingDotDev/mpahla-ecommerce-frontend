@@ -9,7 +9,7 @@ export function ItemPageContainer({loadCart}) {
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [deliveryOption, setDeliveryOption] = useState('6971e3c1535c8bfb31e97d7c');
-  const [isAdded, setIsAdded] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
@@ -39,15 +39,14 @@ export function ItemPageContainer({loadCart}) {
   const handleChange = (event) => {
     setQuantity(Number(event.target.value));
   }
+    const handleClick = (size) => {
+      setSelectedSize(prev => (prev === size ? null : size));
+    };
 
-  const handleClick = () => {
-    setIsAdded(!isAdded)
-    console.log(isAdded)
-  }
 
   if (!product) {
     return (
-      <Loading />
+      <LoadingEffect />
     )
   } else {
     return (
@@ -106,12 +105,16 @@ export function ItemPageContainer({loadCart}) {
             <ul className="size-options">
               {
                 product.size.map((siz) => (
-                  <li 
+                  <li
                     key={siz}
-                    className={isAdded ? 'size-button' : 'chosen-size' } 
-                    onClick={ handleClick }>{siz}</li>
+                    className={selectedSize === siz ? 'chosen-size' : 'size-button'}
+                    onClick={() => handleClick(siz)}
+                  >
+                    {siz}
+                  </li>
                 ))
               }
+
             </ul>
   
             <div className="added-row">

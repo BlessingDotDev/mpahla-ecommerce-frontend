@@ -25,9 +25,6 @@ export function CartItemDetails({ cartItem, loadCart }) {
             Quantity: <span className="quantity-label">{cartItem.quantity}</span>
           </span>
           <div className="edit-cart">
-            <button className="update-quantity-link link-primary">
-              Update
-            </button>
             <button className="delete-quantity-link link-primary"
               onClick={deleteCartItem}>
               Delete

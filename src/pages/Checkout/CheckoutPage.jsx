@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 import { CheckoutHeader } from './CheckoutHeader';
 import { OrderSummary } from './OrderSummary.jsx';
 import { PaymentSummary } from './PaymentSummary.jsx';
+import { Link } from 'react-router';
 import './CheckoutPage.css';
 
-export function CheckoutPage({ cart, loadCart, totalQuanity }) {
+export function CheckoutPage({ cart, loadCart, totalQuantity }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState(null);
 
@@ -36,10 +37,14 @@ export function CheckoutPage({ cart, loadCart, totalQuanity }) {
       <CheckoutHeader />
 
       <div className="checkout-page">
-        <div className="page-title">Review your order</div>
-        {totalQuanity && 
-        <div className="page-title">Items: {totalQuanity }</div>
-        }
+        <div className="page-titles">
+          <div className="page-title">Review your order</div>
+          <div className="page-title">Items: {totalQuantity }</div>
+        </div>
+          <Link to="/orders">
+            click to view orders
+          </Link>
+       
 
         <div className="checkout-grid">
           <OrderSummary cart={cart} deliveryOptions={deliveryOptions} loadCart={loadCart}/>

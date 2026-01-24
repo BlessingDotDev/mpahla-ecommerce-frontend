@@ -40,8 +40,8 @@ function App() {
       
       <Route 
         path="home/:name?" 
-        element={<HomePage />} 
-          totalQuantity={totalQuantity}
+         element={<HomePage totalQuantity={totalQuantity} />} 
+        
       />
       <Route 
         path="item/:id" 
@@ -61,7 +61,8 @@ function App() {
         path="orders" 
         element={< OrdersPage 
           cart={cart} 
-          loadCart={loadCart}/>} 
+          loadCart={loadCart}
+          totalQuantity={totalQuantity}/>} 
       />
 
       <Route path="tracking/:orderid?/:productid?" element={<TrackingPage cart={cart} />} />

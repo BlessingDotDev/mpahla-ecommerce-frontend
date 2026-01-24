@@ -1,7 +1,12 @@
 import dayjs from 'dayjs';
 import { formartCurrency } from '../../utils/money.js';
+import {useEffect} from 'react';
 
 export function OrdersHeader({ order }) {
+  useEffect(() => {
+    console.log(order)
+  })
+
   return (
 
     <div className="order-header">
@@ -15,7 +20,7 @@ export function OrdersHeader({ order }) {
         <div className="order-total">
           <div className="order-header-label">Total:</div>
           <div>
-            {formartCurrency(order.totalCostCents)}
+            {formartCurrency(order.totalPriceCents)}
           </div>
         </div>
       </div>
@@ -23,7 +28,7 @@ export function OrdersHeader({ order }) {
       <div className="order-header-right-section">
         <div className="order-header-label">Order ID:</div>
         <div>
-          {order.id}
+          {order._id}
         </div>
       </div>
     </div>
