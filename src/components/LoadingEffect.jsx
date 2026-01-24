@@ -1,6 +1,6 @@
-import "./Loading.scss";
+import "./LoadingEffect.scss";
 
-export const Loading = () => {
+export const LoadingEffect = () => {
   return (
     <div className="loading-layout">
       <div className="loading-container">

@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router";
 import { formatCurrency } from "../../scripts/utils/money.js";
 import "./ItemPageContainer.scss";
-import { Loading } from "../../components/Loading";
+import { LoadingEffect } from "../../components/LoadingEffect";
 
 export function ItemPageContainer({loadCart}) {
   const [product, setProduct] = useState(null);

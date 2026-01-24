@@ -1,27 +1,25 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router";
-import { Loading } from "../../components/Loading";
+import { LoadingEffect } from "../../components/LoadingEffect";
 
 export function LandingPageGrid() {
   const [categories, setCategories] = useState([]);
+  const [Loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCategoriesData = async () => {
       const response = await axios.get('/api/category');
       setCategories(response.data);
+      setLoading(false);
     }
 
     fetchCategoriesData();
   }, []);
 
-  const passParam = () => {
-
-  }
-
-  if (!categories) {
+  if (Loading) {
     return (
-      <Loading />
+      <LoadingEffect />
     )
   } else {
     return (
@@ -31,13 +29,13 @@ export function LandingPageGrid() {
   
           categories.map((category) => {
             return (
-              <Link to={`/home/${category.name}` } key={category.id} onClick={passParam}>
+              <Link to={`/home/${category.name}` } key={category.id} >
                 <div className="content-container js-content-container"
                   data-product-category={category.category}>
                   <img src={category.image} alt={category.name} />
                   <div className="content-link">
                     <span>{category.name}</span>
-                    <p>&gt</p>
+                    <p>&rarr;</p>
                   </div>
                 </div>
               </Link>
