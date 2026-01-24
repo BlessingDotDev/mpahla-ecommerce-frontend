@@ -71,6 +71,22 @@
   font-size: 14px;
 }
 
+.edit-cart button {
+  padding: 4px 2px;
+  margin: 4px 2px;
+  background-color: pink;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-cart button:hover {
+  opacity: .8
+}
+
+.edit-cart button:active {
+  opacity: .6
+}
+
 .checkout-page .delivery-options {
   margin-top: 24px;
 }
