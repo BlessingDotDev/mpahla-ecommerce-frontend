@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router";
-import { formatCurrency } from '../../scripts/utils/money.js';
+import { formartCurrency } from '../../utils/money.js';
 import { LoadingEffect } from '../../components/LoadingEffect';
 import "./HomePageGrid.scss";
 import "./between-shop-and-item.css"
@@ -51,7 +51,7 @@ export function HomePageGrid({ products, setProducts }) {
                     Nike-Jordan
                   </p>
                   <p className="product-price">
-                    {formatCurrency(product.priceCents)}
+                    {formartCurrency(product.priceCents)}
                   </p>
   
                 </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router";
-import { formatCurrency } from "../../scripts/utils/money.js";
+import { formartCurrency } from "../../utils/money.js";
 import "./ItemPageContainer.scss";
 import { LoadingEffect } from "../../components/LoadingEffect";
 
@@ -76,7 +76,7 @@ export function ItemPageContainer({ loadCart }) {
       <div className="product-names display-product-names">
         <p className="product-brand">{product.brand}</p>
         <p className="product-name">{product.name}</p>
-        <p className="product-price">{formatCurrency(product.priceCents)}</p>
+        <p className="product-price">{formartCurrency(product.priceCents)}</p>
       </div>
 
       {/* Top Add to Cart Button */}
@@ -98,7 +98,7 @@ export function ItemPageContainer({ loadCart }) {
         <div className="product-names">
           <p className="product-brand">{product.brand}</p>
           <p className="product-name">{product.name}</p>
-          <p className="product-price">{formatCurrency(product.priceCents)}</p>
+          <p className="product-price">{formartCurrency(product.priceCents)}</p>
         </div>
 
         {/* Size Section */}

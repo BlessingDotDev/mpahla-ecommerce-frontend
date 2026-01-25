@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { formartCurrency } from '../../utils/money.js';
-import { useEffect } from 'react'
-import {useNavigate } from "react-router"
+import { useNavigate } from "react-router"
 
 export function PaymentSummary({ paymentSummary, loadCart, cart }) {
   const navigate = useNavigate();
