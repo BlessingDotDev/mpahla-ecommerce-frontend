@@ -34,6 +34,7 @@ export default function MobileSidebar({ isOpen, onClose }) {
         {/* Navigation */}
         <nav className="sidebar-nav">
           <Link to="/" onClick={onClose}>Home</Link>
+          <Link to="/home" onClick={onClose}>Shop</Link>
 
           {/* Categories */}
           <button
@@ -46,12 +47,14 @@ export default function MobileSidebar({ isOpen, onClose }) {
 
           {openCategories && (
             <div className="dropdown-menu">
-              <Link to="/category/men" onClick={onClose}>Men</Link>
-              <Link to="/category/women" onClick={onClose}>Women</Link>
-              <Link to="/category/kids" onClick={onClose}>Kids</Link>
-              <Link to="/category/big-kids" onClick={onClose}>Big Kids</Link>
-              <Link to="/category/shoes" onClick={onClose}>Shoes</Link>
-              <Link to="/category/accessories" onClick={onClose}>Accessories</Link>
+              <Link to="/home/Pre Kids" onClick={onClose}>Pre Kids</Link>
+              <Link to="/home/Shoes" onClick={onClose}>Shoes</Link>
+              <Link to="/home/Baby" onClick={onClose}>Baby</Link>
+              <Link to="/home/Ladies" onClick={onClose}>Ladies</Link>
+              <Link to="/home/Men" onClick={onClose}>Men</Link>
+              <Link to="/home/Kids" onClick={onClose}>Kids</Link>
+              <Link to="/home/Sustainability" onClick={onClose}>Sustainability</Link>
+              <Link to="/home/Accessories" onClick={onClose}>Accessories</Link>
             </div>
           )}
 
