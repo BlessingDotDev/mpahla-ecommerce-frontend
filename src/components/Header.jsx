@@ -11,6 +11,7 @@ export function Header({ totalQuantity }) {
     <header>
       <div className="header-container">
         <div className="logo-section">
+        <img className="menu-icon" src={menuIcon} alt="" />
           <Link to="/">
             <span className="logo-name">
               <span className="logo-letter">M</span>p<span className="logo-letter">a</span>hl<span className="logo-letter">a</span>
