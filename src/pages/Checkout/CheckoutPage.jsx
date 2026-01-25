@@ -20,7 +20,7 @@ export function CheckoutPage({ cart, loadCart, totalQuantity }) {
     }
 
     fetchCheckoutData();
-  }, []);
+  }, [deliveryOptions]);
 
   useEffect(() => {
     const fetchPaymentSummary = async () => {

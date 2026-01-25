@@ -1,15 +1,14 @@
 import dayjs from 'dayjs';
 
-export function DeliveryDate({ cartItem, deliveryOptions }) {
-  
-  const selectedDeliveryOption = deliveryOptions
-    .find((deliveryOption) => {
-      return deliveryOption._id === cartItem.deliveryOption._id
-    });
+export function DeliveryDate({ selectedDeliveryOption }) {
+  if (!selectedDeliveryOption) return null;
 
   return (
     <div className="delivery-date">
-      Delivery date: {dayjs(selectedDeliveryOption.estimatedDeliveryTimeMs).format('dddd, MMMM D')}
+      Delivery date:{" "}
+      {dayjs(selectedDeliveryOption.estimatedDeliveryTimeMs).format(
+        "dddd, MMMM D"
+      )}
     </div>
   );
 }

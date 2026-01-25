@@ -67,7 +67,7 @@ function App() {
         element={<TrackingPage 
           totalQuantity={totalQuantity} />} 
       />
-      <Route path="#" element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

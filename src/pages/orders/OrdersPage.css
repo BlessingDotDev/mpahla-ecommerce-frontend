@@ -222,9 +222,10 @@
 
 @media (max-width: 600px) {
   .orders-page .order-header {
+    /*
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 16px; */
   }
 
   .orders-page .order-header-left-section {

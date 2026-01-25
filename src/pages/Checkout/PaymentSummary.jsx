@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { formartCurrency } from '../../utils/money.js';
 import { useEffect } from 'react'
+import {useNavigate } from "react-router"
 
 export function PaymentSummary({ paymentSummary, loadCart, cart }) {
-
+  const navigate = useNavigate();
 
   const orderCart = cart.map(item => ({
     product: item.product._id,
@@ -11,17 +12,16 @@ export function PaymentSummary({ paymentSummary, loadCart, cart }) {
     deliveryOption: item.deliveryOption._id
   }));
 
-  useEffect(() => {
-    console.log(orderCart)
-  })
-
   const createOrder = async () => {
     try {
   await axios.post('/api/orders', {
     cart: orderCart,
     totalPriceCents: paymentSummary.totalCents
   });
-  loadCart();
+
+  await loadCart();
+  navigate('/orders');
+
 } catch (error) {
   console.log('STATUS:', error.response?.status);
   console.log('BACKEND MESSAGE:', error.response?.data);
