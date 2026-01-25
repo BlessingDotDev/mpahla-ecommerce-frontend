@@ -1,17 +1,24 @@
 import { Link } from "react-router";
 import { HeaderUser } from "./HeaderUser";
+import { useState } from "react";
 import menuIcon from "../assets/images/icons/menu.svg";
 import searchIcon from "../assets/images/icons/search.svg";
 import cartIcon from "../assets/images/icons/shopping-cart.svg";
-
+import MobileSidebar from "./MobileSidebar";
 import "./Header.css";
 
 export function Header({ totalQuantity }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header>
+      <MobileSidebar
+        isOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+      />
       <div className="header-container">
         <div className="logo-section">
-        <img className="menu-icon" src={menuIcon} alt="" />
+        <img onClick={() => setMenuOpen(true)} className="menu-icon" src={menuIcon} alt="" />
           <Link to="/">
             <span className="logo-name">
               <span className="logo-letter">M</span>p<span className="logo-letter">a</span>hl<span className="logo-letter">a</span>
