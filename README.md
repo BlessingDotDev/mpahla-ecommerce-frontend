@@ -1,12 +1,32 @@
-# React + Vite
+# E-Commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce frontend built with **React** and **Vite**.  
+The application provides a smooth shopping experience with authentication, cart management, and order tracking.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive UI for desktop and mobile devices
+- User authentication (login & signup)
+- Product listing and product details
+- Add/remove items from cart
+- Checkout flow and order placement
+- Order tracking interface
+- Fast development and build performance using Vite
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript (ES6+)
+- SCSS / CSS 
+- REST API integration
+
+![Landing Page](./screenshots/landing.png)
+![Landing Page](./screenshots/landing%20(2).png)
+![Home Page](./screenshots/home.png)
+![Checkout Page](./screenshots/checkout.png)
+![Order Page](./screenshots/order.png)
+![Tracking Page](./screenshots/tracking.png)
+![mobile Page](./screenshots/mobile.png)
+![mobile Page](./screenshots/Screenshot%20(1368).png)
+![mobile Page](./screenshots/login.png)
