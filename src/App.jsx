@@ -9,13 +9,14 @@ import { OrdersPage } from "./pages/Orders/OrdersPage.jsx";
 import { TrackingPage } from "./pages/Tracking/TrackingPage";
 import { NotFoundPage } from "./pages/Notfound/NotFoundPage.jsx";
 import { getTotalQuantity } from "./utils/getTotalQuantity.js";
+import { API_URL } from "./config.js";
 
 function App() {
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
 
   const loadCart = async () => {
-        const response = await axios.get('http://localhost:5000/api/cart');
+        const response = await axios.get(`${API_URL}/api/cart`);
         setCart(response.data);
       }
   
