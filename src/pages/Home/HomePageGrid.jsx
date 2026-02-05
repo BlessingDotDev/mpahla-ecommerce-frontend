@@ -5,7 +5,8 @@ import { Link } from "react-router";
 import { formartCurrency } from '../../utils/money.js';
 import { LoadingEffect } from '../../components/LoadingEffect';
 import "./HomePageGrid.scss";
-import "./between-shop-and-item.css"
+import "./between-shop-and-item.css";
+import { API_URL } from '../../config.js';
 
 export function HomePageGrid({ products, setProducts }) {
   const { name } = useParams();
@@ -13,7 +14,7 @@ export function HomePageGrid({ products, setProducts }) {
 
   useEffect(() => {
     const fetchProductsData = async () => {
-      const response = await axios.get("/api/products");
+      const response = await axios.get(`${API_URL}/api/products`);
       const data = response.data;
 
       name && setProducts(data.filter(product => product.category === name));

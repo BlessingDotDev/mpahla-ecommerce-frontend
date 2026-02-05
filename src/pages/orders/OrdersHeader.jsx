@@ -2,11 +2,12 @@ import axios from 'axios';
 import dayjs from 'dayjs';
 import { formartCurrency } from '../../utils/money.js';
 import {useEffect} from 'react';
+import { API_URL } from '../../config.js';
 
 export function OrdersHeader({ order, loadOrder }) {
 
   const deleteorder = async (orderId) => {
-    await axios.delete(`api/orders/${orderId}`);
+    await axios.delete(`${API_URL}/api/orders/${orderId}`);
     await loadOrder;
   }
 

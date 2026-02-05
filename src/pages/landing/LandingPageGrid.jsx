@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router";
 import { LoadingEffect } from "../../components/LoadingEffect";
+import { API_URL } from '../../config.js';
 
 export function LandingPageGrid() {
   const [categories, setCategories] = useState([]);
@@ -9,7 +10,7 @@ export function LandingPageGrid() {
 
   useEffect(() => {
     const fetchCategoriesData = async () => {
-      const response = await axios.get('/api/category');
+      const response = await axios.get(`${API_URL}/api/category`);
       setCategories(response.data);
       setLoading(false);
     }

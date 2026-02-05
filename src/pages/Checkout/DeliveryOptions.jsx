@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 import { formartCurrency } from "../../utils/money";
+import { API_URL } from '../../config.js';
 
 export function DeliveryOptions({
   deliveryOptions,
@@ -17,7 +18,7 @@ export function DeliveryOptions({
     setSelectedDeliveryOption(newOption);
 
     try {
-      await axios.put(`/api/cart/${cartItem._id}`, {
+      await axios.put(`${API_URL}/api/cart/${cartItem._id}`, {
         quantity: cartItem.quantity,
         deliveryOptionId
       });

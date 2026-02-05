@@ -3,12 +3,13 @@ import { useEffect, useState} from 'react';
 import { Header } from '../../components/Header.jsx';
 import { OrdersGrid } from './OrdersGrid.jsx';
 import './OrdersPage.css';
+import { API_URL } from '../../config.js';
 
 export function OrdersPage({ cart, loadCart, totalQuantity }) {
   const [orders, setOrders] = useState([]);
   
   const loadOrder = async () => {
-  const response = await axios.get('api/orders');
+  const response = await axios.get(`${API_URL}/api/orders`);
   setOrders(response.data);
   }
 

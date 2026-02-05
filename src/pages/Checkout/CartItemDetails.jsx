@@ -1,10 +1,11 @@
 import axios from "axios";
 import { formartCurrency } from "../../utils/money.js";
+import { API_URL } from '../../config.js';
 
 export function CartItemDetails({ cartItem, loadCart }) {
 
   const deleteCartItem = async () => {
-    await axios.delete(`/api/cart/${cartItem._id}`);
+    await axios.delete(`${API_URL}/api/cart/${cartItem._id}`);
     await loadCart();
   }
 

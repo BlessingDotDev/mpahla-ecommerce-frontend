@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router";
 import { formartCurrency } from "../../utils/money.js";
 import "./ItemPageContainer.scss";
 import { LoadingEffect } from "../../components/LoadingEffect";
+import { API_URL } from '../../config.js';
 
 
 export function ItemPageContainer({ loadCart }) {
@@ -22,7 +23,7 @@ export function ItemPageContainer({ loadCart }) {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `http://localhost:5000/api/products/${id}`
+        `${API_URL}/api/products/${id}`
       );
       setProduct(response.data);
     };
@@ -32,7 +33,7 @@ export function ItemPageContainer({ loadCart }) {
   // Add item to cart
   const addToCart = async (product, quantity, deliveryOption) => {
     try {
-      const res = await axios.post("/api/cart", {
+      const res = await axios.post(`${API_URL}/api/cart`, {
         product: product._id,
         quantity,
         deliveryOption,

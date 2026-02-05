@@ -6,6 +6,7 @@ import { PaymentSummary } from './PaymentSummary.jsx';
 import { LoadingEffect } from '../../components/LoadingEffect';
 import { Link } from 'react-router';
 import './CheckoutPage.css';
+import { API_URL } from '../../config.js';
 
 export function CheckoutPage({ cart, loadCart, totalQuantity }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
@@ -14,7 +15,7 @@ export function CheckoutPage({ cart, loadCart, totalQuantity }) {
 
   useEffect(() => {
     const fetchCheckoutData = async () => {
-      const response = await axios.get('/api/deliveryoptions');
+      const response = await axios.get(`${API_URL}/api/deliveryoptions`);
       setDeliveryOptions(response.data);
       setLoading(false);
     }
@@ -24,7 +25,7 @@ export function CheckoutPage({ cart, loadCart, totalQuantity }) {
 
   useEffect(() => {
     const fetchPaymentSummary = async () => {
-      const response = await axios.get('/api/payment/summary');
+      const response = await axios.get(`${API_URL}/api/payment/summary`);
       setPaymentSummary(response.data)
     }
 

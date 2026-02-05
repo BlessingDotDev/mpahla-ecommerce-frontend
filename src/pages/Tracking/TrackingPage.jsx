@@ -3,7 +3,8 @@ import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import { Header } from '../../components/Header';
-import './TrackingPage.css'
+import './TrackingPage.css';
+import { API_URL } from '../../config.js';
 
 export function TrackingPage({ totalQuantity }) {
   const [order, setOrder] = useState(null);
@@ -11,7 +12,7 @@ export function TrackingPage({ totalQuantity }) {
 
   useEffect(() => {
     const fetchTrackingData = async () => {
-      const response = await axios.get(`/api/orders/${orderId}`);
+      const response = await axios.get(`${API_URL}/api/orders/${orderId}`);
       setOrder(response.data);
     };
 

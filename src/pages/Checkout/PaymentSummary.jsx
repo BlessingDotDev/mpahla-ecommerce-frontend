@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { formartCurrency } from '../../utils/money.js';
 import { useNavigate } from "react-router"
+import { API_URL } from '../../config.js';
 
 export function PaymentSummary({ paymentSummary, loadCart, cart }) {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ export function PaymentSummary({ paymentSummary, loadCart, cart }) {
 
   const createOrder = async () => {
     try {
-  await axios.post('/api/orders', {
+  await axios.post(`${API_URL}/api/orders`, {
     cart: orderCart,
     totalPriceCents: paymentSummary.totalCents
   });

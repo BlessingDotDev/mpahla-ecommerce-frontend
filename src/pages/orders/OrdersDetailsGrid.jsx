@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router';
 import { Fragment } from 'react';
 import BuyAgainIcon from '../../assets/images/icons/buy-again.png';
+import  { API_URL } from '../../config.js';
 
 export function OrdersDetailsGrid({ order, loadCart}) {
   
@@ -11,7 +12,7 @@ export function OrdersDetailsGrid({ order, loadCart}) {
       {order.products.map((orderProduct) => {
       
         const addToCart = async () => {
-          await axios.post('/api/cart', {
+          await axios.post(`${API_URL}/api/cart`, {
             product: orderProduct.product._id,
             quantity: 1,
             deliveryOption: '6971e3c1535c8bfb31e97d7c'
