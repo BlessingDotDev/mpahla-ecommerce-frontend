@@ -21,12 +21,31 @@ The application provides a smooth shopping experience with authentication, cart 
 - SCSS / CSS 
 - REST API integration
 
+VIEW SCREENSHOTS
+
+Landing Page
+
 ![Landing Page](./screenshots/landing.png)
 ![Landing Page](./screenshots/landing%20(2).png)
+
+Home Page
+
 ![Home Page](./screenshots/home.png)
+
+Checkout Page
+
 ![Checkout Page](./screenshots/checkout.png)
+
+Order Page
+
 ![Order Page](./screenshots/order.png)
+
+Tracking Page
+
 ![Tracking Page](./screenshots/tracking.png)
+
+Mobile
+
 ![mobile Page](./screenshots/mobile.png)
 ![mobile Page](./screenshots/Screenshot%20(1368).png)
 ![mobile Page](./screenshots/login.png)
