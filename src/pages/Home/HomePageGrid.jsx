@@ -14,17 +14,17 @@ export function HomePageGrid({ products, setProducts }) {
 
   useEffect(() => {
     const fetchProductsData = async () => {
-      const response = await axios.get(`${API_URL}/api/products`);
+      const response = await axios.get(`https://mpahla-ecommerce-prisma-backend.onrender.com/api/products`);
       const data = response.data;
 
       name && setProducts(data.filter(product => product.category === name));
       !name && setProducts(data);
       setIsLoading(false);
     };
-
+    
     fetchProductsData();
   }, [name, setProducts]);
-
+  
   if (isLoading) {
     return (
       <LoadingEffect />
@@ -35,13 +35,13 @@ export function HomePageGrid({ products, setProducts }) {
         {
           products.map((product) => {
             return (
-              <div key={product._id} className="product-container"
+              <div key={product.id} className="product-container"
   
               >
                 <div className="product-image js-product-image"
-                  data-product-id={product._id}>
-                  <Link to={`/item/${product._id}`} >
-                    <img src={product.image} alt="" />
+                  data-product-id={product.id}>
+                  <Link to={`/item/${product.id}`} >
+                    <img src={product.imageURL} alt="" />
                   </Link>
                 </div>
                 <div className="product-info">

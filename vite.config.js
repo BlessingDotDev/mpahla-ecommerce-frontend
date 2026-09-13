@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://mpahla-ecommerce-backend.onrender.com'
+        target: 'https://mpahla-ecommerce-prisma-backend.onrender.com',
       }
     }
   }

@@ -10,7 +10,7 @@ export function LandingPageGrid() {
 
   useEffect(() => {
     const fetchCategoriesData = async () => {
-      const response = await axios.get(`${API_URL}/api/category`);
+      const response = await axios.get(`https://mpahla-ecommerce-prisma-backend.onrender.com/api/products/category`);
       setCategories(response.data);
       setLoading(false);
     }
@@ -27,13 +27,12 @@ export function LandingPageGrid() {
       
       <div className="home-grid-layout js-home-grid-layout">
         {
-  
           categories.map((category) => {
             return (
               <Link to={`/home/${category.name}` } key={category.id} >
                 <div className="content-container js-content-container"
                   data-product-category={category.category}>
-                  <img src={category.image} alt={category.name} />
+                  <img src={category.imageURL} alt={category.name} />
                   <div className="content-link">
                     <span>{category.name}</span>
                     <p>&rarr;</p>

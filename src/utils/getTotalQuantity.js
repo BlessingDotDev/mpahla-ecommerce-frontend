@@ -5,5 +5,5 @@ export function getTotalQuantity(cart) {
     totalQuantity += cartItem.quantity;
   });
 
-  return totalQuantity;
+  return totalQuantity ;
 }

@@ -16,7 +16,7 @@ function App() {
   const [totalQuantity, setTotalQuantity] = useState(0);
 
   const loadCart = async () => {
-        const response = await axios.get(`${API_URL}/api/cart`);
+        const response = await axios.get(`https://mpahla-ecommerce-prisma-backend.onrender.com/api/cart`);
         setCart(response.data);
       }
   

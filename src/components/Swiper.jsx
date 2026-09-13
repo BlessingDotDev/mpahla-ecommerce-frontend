@@ -20,7 +20,7 @@ export function Swiper({products}) {
     <Slider {...settings} className="swiper-container">
       {products.map((product) => (
         <div key={product.id} className="slide-content">
-          <img src={product.image} 
+          <img src={product.imageURL} 
             alt={product.name} className="image"/>
             <h2>{product.name}</h2>
         </div>

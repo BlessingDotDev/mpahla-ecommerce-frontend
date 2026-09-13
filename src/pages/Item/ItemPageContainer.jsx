@@ -10,9 +10,9 @@ import { API_URL } from '../../config.js';
 export function ItemPageContainer({ loadCart }) {
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [deliveryOption, setDeliveryOption] = useState(
-    "6971e3c1535c8bfb31e97d7c"
-  );
+  // const [deliveryOption, setDeliveryOption] = useState(
+  //   "6971e3c1535c8bfb31e97d7c"
+  // );
   const [selectedSize, setSelectedSize] = useState(null);
   const [addedMessage, setAddedMessage] = useState(false); // Track Add-to-Cart message
   const [isFavourite, setIsFavourite] = useState(false); // Track favourite state
@@ -23,9 +23,10 @@ export function ItemPageContainer({ loadCart }) {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `${API_URL}/api/products/${id}`
+        `https://mpahla-ecommerce-prisma-backend.onrender.com/api/products/${id}`
       );
       setProduct(response.data);
+      console.log(response.data);
     };
     fetchData();
   }, [id]);
@@ -33,7 +34,7 @@ export function ItemPageContainer({ loadCart }) {
   // Add item to cart
   const addToCart = async (product, quantity, deliveryOption) => {
     try {
-      const res = await axios.post(`${API_URL}/api/cart`, {
+      const res = await axios.post(`https://mpahla-ecommerce-prisma-backend.onrender.com/api/cart`, {
         product: product._id,
         quantity,
         deliveryOption,
@@ -83,15 +84,15 @@ export function ItemPageContainer({ loadCart }) {
       {/* Top Add to Cart Button */}
       <button
         className="add-to-cart-button display-add-top-button js-add-to-cart-button"
-        data-product-id={product._id}
-        onClick={() => addToCart(product, quantity, deliveryOption)}
+        data-product-id={product.id}
+        onClick={() => addToCart(product, quantity, "6971e3c1535c8bfb31e97d7c")}
       >
         Add to Cart
       </button>
 
       {/* Product Image */}
       <div className="image-container">
-        <img className="product-image" src={product.image} alt="product-image" />
+        <img className="product-image" src={product.imageURL} alt="product-image" />
       </div>
 
       {/* Product Info Section */}
@@ -164,7 +165,7 @@ export function ItemPageContainer({ loadCart }) {
           <button
             className="add-to-cart-button js-add-to-cart-button"
             data-product-id={product._id}
-            onClick={() => addToCart(product, quantity, deliveryOption)}
+            onClick={() => addToCart(product, quantity)}
           >
             Add to Cart
           </button>
@@ -187,12 +188,12 @@ export function ItemPageContainer({ loadCart }) {
               Stars:{" "}
               <img
                 className="rating-image"
-                src={`images/ratings/rating-${product.ratings.starts * 10}.png`}
+                src={`images/ratings/rating-${product.ratingStarts * 10}.png`}
                 alt=""
               />
             </div>
             <div className="counts-row">
-              Counts: <span className="count">{product.ratings.counts}</span>
+              Counts: <span className="count">{product.ratingsCounts}</span>
             </div>
           </div>
         </div>
